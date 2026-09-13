@@ -17,14 +17,14 @@ REQUIRED = {
     "условный JavaScript анкеты": """  {% if page.url == '/online-zayavka/' %}
   <script src=\"{{ '/assets/js/online-application.js' | relative_url }}\" defer></script>
   {% endif %}""",
-    "responsive preload": "imagesrcset=\"{{ '/assets/img/tatyana-hero-mobile.webp' | relative_url }} 288w, {{ page.hero_photo | relative_url }} 360w\"",
+    "responsive preload": "imagesrcset=\"{{ site.data.broker.photo_mobile | relative_url }} 288w, {{ site.data.broker.photo | relative_url }} 360w\"",
     "fragment request ID": "fragmentParams.get('id') || legacyParams.get('id') || ''",
 }
 
 FORBIDDEN = {
     "глобальный CSS анкеты": "  <link rel=\"stylesheet\" href=\"{{ '/assets/css/online-application.css' | relative_url }}\">\n  <link rel=\"stylesheet\" href=\"{{ '/assets/css/print.css' | relative_url }}\" media=\"print\">",
     "глобальный JavaScript анкеты": "  <script src=\"{{ '/assets/js/main.js' | relative_url }}\" defer></script>\n  <script src=\"{{ '/assets/js/online-application.js' | relative_url }}\" defer></script>",
-    "старый preload": "{% if page.hero_photo %}<link rel=\"preload\" as=\"image\" href=\"{{ page.hero_photo | relative_url }}\">{% endif %}",
+    "старый preload": "{% if site.data.broker.photo %}<link rel=\"preload\" as=\"image\" href=\"{{ site.data.broker.photo | relative_url }}\">{% endif %}",
     "scenario в thank-you parser": "scenario: params.get('scenario')",
     "status в thank-you parser": "status: params.get('status')",
 }

@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/online-application.css' | relative_url }}">
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
-  {% if site.data.broker.photo != '' and page.url == '/' %}<link rel="preload" as="image" href="{{ site.data.broker.photo | relative_url }}">{% endif %}
+  {% if site.data.broker.photo != '' and page.url == '/' %}<link rel="preload" as="image" href="{{ site.data.broker.photo | relative_url }}"{% if site.data.broker.photo_mobile != '' %} imagesrcset="{{ site.data.broker.photo_mobile | relative_url }} 288w, {{ site.data.broker.photo | relative_url }} 360w" imagesizes="(max-width: 760px) 288px, 360px"{% endif %}>{% endif %}
   {% include broker-schema.html %}
   {% if page.schema %}{% capture resolved_schema %}{% include resolve-meta.html value=page.schema json=true %}{% endcapture %}<script type="application/ld+json">{{ resolved_schema | strip }}</script>{% endif %}
   {% if page.faq %}{% include faq-schema.html items=page.faq %}{% endif %}

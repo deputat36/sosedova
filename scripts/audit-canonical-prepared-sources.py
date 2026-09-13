@@ -74,29 +74,16 @@ def check_photo_source(relative: str, uses_front_matter: bool) -> int:
         return 1
 
     errors = 0
-    required = [
-        "<picture>",
-        "tatyana-hero-mobile.webp",
-        "tatyana-hero.webp",
-        'width="360" height="450"',
-        'type="image/webp"',
-    ]
-
-    for marker in required:
-        if marker not in text:
-            fail(path, f"Отсутствует канонический фото-маркер: {marker}")
-            errors += 1
-
-    if uses_front_matter and not re.search(
-        r'^hero_photo:\s*["\']?/assets/img/tatyana-hero\.webp["\']?\s*$',
-        text,
-        re.MULTILINE,
-    ):
-        fail(path, "Front matter не указывает канонический WebP-портрет")
+    if '{% include portrait.html %}' not in text:
+        fail(path, "Страница должна использовать общий шаблон портрета")
         errors += 1
-
-    if "tatyana-hero.svg" in text:
-        fail(path, "Исходник продолжает ссылаться на удалённый SVG-портрет")
+    _, portrait = read("_includes/portrait.html")
+    for marker in ('<picture>', 'site.data.broker.photo_mobile', 'site.data.broker.photo', 'width="360" height="450"', 'broker-monogram'):
+        if marker not in portrait:
+            fail(path, f"В общем портрете отсутствует: {marker}")
+            errors += 1
+    if 'tatyana-' in text or 'tatyana-' in portrait:
+        fail(path, "Портрет ссылается на другого специалиста")
         errors += 1
     return errors
 
