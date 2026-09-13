@@ -22,10 +22,13 @@
   let deliveryCompleted = false;
 
   const SCENARIO_BY_SLUG = {
+    'ipoteka-dlya-ip': 'ИП или самозанятость',
+    'ipoteka-dlya-samozanyatyh': 'ИП или самозанятость',
+    'strahovanie': 'Другая ситуация',
     'podbor-ipoteki': 'Первичная консультация и подбор ипотеки',
     'ipoteka-na-novostroyku': 'Покупка квартиры в новостройке',
     'ipoteka-na-vtorichnoe-zhile': 'Покупка вторичного жилья',
-    'ipoteka-na-kvartiru': 'Покупка вторичного жилья',
+    'ipoteka-na-kvartiru': 'Первичная консультация и подбор ипотеки',
     'ipoteka-na-dom': 'Покупка дома',
     'ipoteka-na-stroitelstvo-doma': 'Строительство дома',
     'semeynaya-ipoteka': 'Семейная ипотека',
@@ -47,7 +50,6 @@
   const OBJECT_BY_SLUG = {
     'ipoteka-na-novostroyku': 'Квартира в новостройке',
     'ipoteka-na-vtorichnoe-zhile': 'Квартира на вторичном рынке',
-    'ipoteka-na-kvartiru': 'Квартира на вторичном рынке',
     'ipoteka-na-dom': 'Дом с участком',
     'ipoteka-na-stroitelstvo-doma': 'Строительство дома'
   };

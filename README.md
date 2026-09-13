@@ -47,3 +47,25 @@
 Репозиторий `deputat36/broker` используется как исходная техническая база другого проекта и не изменяется.
 
 Все изменения для Людмилы Соседовой выполняются только в этом репозитории.
+
+## Результат адаптации и запуск
+
+Актуальное состояние описано в [docs/rebranding-status.md](docs/rebranding-status.md).
+Один список недостающих сведений: [docs/owner-inputs.md](docs/owner-inputs.md).
+
+До подключения получателя владельца автоматическая отправка отключена. Форма
+подготавливает обращение для самостоятельной отправки через SMS. Старый ключ
+другого брокера не используется. Готовность к рекламе требует проверки реального
+получения обращения и заполнения данных оператора.
+
+Проверка Jekyll выполняется GitHub Actions. Локально после сборки:
+
+```sh
+python3 scripts/audit-broker-launch.py _site
+node scripts/test-mortgage-calculator-application-action.js assets/js/mortgage-calculator.js
+node scripts/test-calculator-application-prefill.js assets/js/calculator-application-prefill-runtime.js
+node scripts/test-tracking-privacy.js assets/js/main.js
+```
+
+Для браузерной проверки нужны Playwright и Chromium:
+`node scripts/browser-smoke.cjs _site`. Скрипт не отправляет реальные заявки.
