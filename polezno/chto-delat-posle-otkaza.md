@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Отказали в ипотеке: что делать дальше | Борисоглебск"
+title: "Отказали в ипотеке: что делать дальше | Ипотека по России"
 description: "Что делать после отказа банка по ипотеке: как проверить кредитную историю, нагрузку, доход и объект, что изменить перед повторной заявкой и когда нужна помощь брокера."
 permalink: "/polezno/chto-delat-posle-otkaza/"
 og_type: "article"
@@ -12,7 +12,7 @@ og_type: "article"
   <p class="lead">Отказ не всегда означает, что ипотека невозможна. Но после него особенно важно остановить хаотичные заявки, собрать факты и понять, что именно нужно изменить.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Банк отказал в ипотеке' | url_encode }}&amp;placement=rejection_hero">Разобрать отказ онлайн</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -97,6 +97,6 @@ og_type: "article"
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Банк отказал в ипотеке' | url_encode }}&amp;placement=rejection_final">Заполнить заявку</a>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">Написать ВК</a>
+    {% include social-links.html %}
   </div>
 </section>

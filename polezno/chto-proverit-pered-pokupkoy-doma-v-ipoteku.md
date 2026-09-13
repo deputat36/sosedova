@@ -4,15 +4,15 @@ title: "Что проверить перед покупкой дома в ипо
 description: "Чек-лист перед покупкой дома в ипотеку: оформление дома и земли, назначение участка, границы, коммуникации, состояние объекта, оценка и требования банка."
 permalink: "/polezno/chto-proverit-pered-pokupkoy-doma-v-ipoteku/"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что проверить перед покупкой дома в ипотеку","author":{"@type":"Person","name":"Татьяна Стерликова"},"about":"Подготовка покупки дома в ипотеку"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что проверить перед покупкой дома в ипотеку","author":{"@type":"Person","name":"__BROKER_NAME__"},"about":"Подготовка покупки дома в ипотеку"}'
 ---
 
 <section class="page-hero section">
-  <div class="breadcrumbs"><a href="{{ '/' | relative_url }}">Главная</a> / <a href="{{ '/polezno/' | relative_url }}">Полезно</a> / Покупка дома</div>
+  
   <p class="eyebrow">Дом и земельный участок</p>
   <h1>Что проверить перед покупкой дома в ипотеку</h1>
   <p class="lead">При покупке дома банк оценивает сразу несколько связанных объектов: заемщика, строение и земельный участок. Даже предварительно одобренная ипотека не означает автоматического согласования выбранного дома.</p>
-  <div class="hero-actions"><a class="btn btn-primary" href="{{ '/konsultaciya/' | relative_url }}">Разобрать покупку</a><a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a></div>
+  <div class="hero-actions"><a class="btn btn-primary" href="{{ '/konsultaciya/' | relative_url }}">Разобрать покупку</a><a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a></div>
 </section>
 
 <section class="section">
@@ -56,11 +56,11 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что �
     <p>Ипотечный брокер помогает с требованиями банка и подготовкой заявки, но не заменяет юриста, кадастрового инженера, оценщика или технического специалиста. Их участие особенно важно при сложной истории права, спорных границах, реконструкции или заметных дефектах дома.</p>
   </article>
   <aside class="sidebar">
-    <div class="seo-panel"><h3>Ипотека на дом</h3><p>Татьяна поможет сопоставить параметры заемщика, объекта и требования банка.</p><a class="btn btn-primary" href="{{ '/uslugi/ipoteka-na-dom/' | relative_url }}">Услуга и консультация</a></div>
-    <div class="seo-panel"><h3>Проверка объекта</h3><ul><li><a href="{{ '/polezno/pochemu-bank-ne-odobryaet-obekt-ipoteki/' | relative_url }}">Почему банк может не принять объект</a></li><li><a href="{{ '/polezno/avans-zadatok-i-ipoteka/' | relative_url }}">Аванс и ипотека</a></li><li><a href="{{ '/geo/borisoglebsk/' | relative_url }}">Борисоглебск и округ</a></li><li><a href="{{ '/geo/gribanovskiy/' | relative_url }}">Грибановский район</a></li><li><a href="{{ '/geo/povorino/' | relative_url }}">Поворинский район</a></li></ul></div>
+    <div class="seo-panel"><h3>Ипотека на дом</h3><p>{{ site.data.broker.first_name }} поможет сопоставить параметры заемщика, объекта и требования банка.</p><a class="btn btn-primary" href="{{ '/uslugi/ipoteka-na-dom/' | relative_url }}">Услуга и консультация</a></div>
+    <div class="seo-panel"><h3>Проверка объекта</h3><ul><li><a href="{{ '/polezno/pochemu-bank-ne-odobryaet-obekt-ipoteki/' | relative_url }}">Почему банк может не принять объект</a></li><li><a href="{{ '/polezno/avans-zadatok-i-ipoteka/' | relative_url }}">Аванс и ипотека</a></li></ul></div>
   </aside>
 </section>
 
-<section class="section compact-section"><div class="notice"><div><p class="eyebrow">Клиентам «ЭТАЖИ»</p><h2>Условия сопровождения уточняются до начала работы</h2><p>Если сделка проходит через компанию «ЭТАЖИ», состав ипотечного сопровождения и порядок оплаты зависят от действующих условий компании и параметров конкретной сделки. До начала работы Татьяна пояснит, что входит в услугу и предусмотрена ли отдельная оплата.</p></div><a class="btn btn-dark" href="{{ '/etagi/' | relative_url }}">Подробнее</a></div></section>
 
-<section class="section cta-section"><div><p class="eyebrow">До аванса за дом</p><h2>Проверьте ипотечный маршрут заранее</h2><p>Подготовьте населенный пункт, цену, взнос, доход и имеющиеся сведения о доме и участке.</p></div><div class="cta-actions"><a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a><button class="btn btn-secondary" type="button" data-copy-phone>MAX</button><a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВКонтакте</a></div></section>
+
+<section class="section cta-section"><div><p class="eyebrow">До аванса за дом</p><h2>Проверьте ипотечный маршрут заранее</h2><p>Подготовьте населенный пункт, цену, взнос, доход и имеющиеся сведения о доме и участке.</p></div><div class="cta-actions"><a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>{% include social-links.html %}</div></section>

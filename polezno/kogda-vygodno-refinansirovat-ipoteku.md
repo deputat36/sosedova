@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Когда выгодно рефинансировать ипотеку | Татьяна Стерликова"
+title: "Когда выгодно рефинансировать ипотеку | __BROKER_NAME__"
 description: "Когда рефинансирование ипотеки может быть выгодным: ставка, остаток долга, срок, платеж, расходы на переоформление, страховка, оценка и требования банка."
 permalink: "/polezno/kogda-vygodno-refinansirovat-ipoteku/"
 breadcrumb: "Когда выгодно рефинансировать ипотеку"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Когда выгодно рефинансировать ипотеку","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/kogda-vygodno-refinansirovat-ipoteku/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Когда выгодно рефинансировать ипотеку","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/kogda-vygodno-refinansirovat-ipoteku/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Когд
   <p class="lead">Рефинансирование не всегда выгодно только потому, что где-то ставка ниже. Нужно считать остаток долга, срок, платеж, расходы на переоформление, страховку, оценку и требования нового банка.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/konsultaciya/' | relative_url }}">Проверить выгоду</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -109,11 +109,11 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Когд
   <div>
     <p class="eyebrow">Есть действующая ипотека?</p>
     <h2>Проверьте, есть ли смысл менять условия</h2>
-    <p>Позвоните или напишите Татьяне: остаток долга, платеж, срок, ставка, город и были ли просрочки.</p>
+    <p>Позвоните или напишите {{ site.data.broker.dative }}: остаток долга, платеж, срок, ставка, город и были ли просрочки.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Ипотека без первоначального взноса: варианты и риски | Татьяна Стерликова"
+title: "Ипотека без первоначального взноса: варианты и риски | __BROKER_NAME__"
 description: "Что проверить, если нет или мало первоначального взноса: источник средств, маткапитал, долговая нагрузка, объект, резерв после сделки и риски сомнительных схем."
 permalink: "/polezno/mozhno-li-vzyat-ipoteku-bez-pervonachalnogo-vznosa/"
 breadcrumb: "Ипотека без первоначального взноса"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека без первоначального взноса: варианты и риски","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/mozhno-li-vzyat-ipoteku-bez-pervonachalnogo-vznosa/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека без первоначального взноса: варианты и риски","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/mozhno-li-vzyat-ipoteku-bez-pervonachalnogo-vznosa/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <p class="lead">Если собственных денег на первоначальный взнос нет или их мало, не стоит начинать с обещания «оформим без взноса». Сначала нужно понять источник средств, доход, кредитную нагрузку, объект, программу и какой резерв останется после сделки.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Нет или мало первоначального взноса' | url_encode }}&amp;placement=no_downpayment_hero">Разобрать ситуацию онлайн</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/uslugi/ipoteka-bez-pervonachalnogo-vznosa/' | relative_url }}">Услуга брокера</a>
   </div>
 </section>
@@ -115,12 +115,12 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <div>
     <p class="eyebrow">Нет взноса или его мало?</p>
     <h2>Сначала проверьте реалистичный маршрут покупки</h2>
-    <p>Передайте стоимость объекта, доход, кредиты, доступные средства и наличие маткапитала. Татьяна поможет структурировать банковскую часть и определить следующий шаг без обещаний оформить ипотеку без взноса любой ценой.</p>
+    <p>Передайте стоимость объекта, доход, кредиты, доступные средства и наличие маткапитала. {{ site.data.broker.first_name }} поможет структурировать банковскую часть и определить следующий шаг без обещаний оформить ипотеку без взноса любой ценой.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Нет или мало первоначального взноса' | url_encode }}&amp;placement=no_downpayment_footer">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

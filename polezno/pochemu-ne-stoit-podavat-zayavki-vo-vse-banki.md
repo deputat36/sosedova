@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Почему не стоит подавать заявки на ипотеку во все банки | Татьяна Стерликова"
+title: "Почему не стоит подавать заявки на ипотеку во все банки | __BROKER_NAME__"
 description: "Почему не стоит отправлять ипотечные заявки во все банки подряд: частые обращения, кредитная история, отказы, выбор банка и подготовка заявки."
 permalink: "/polezno/pochemu-ne-stoit-podavat-zayavki-vo-vse-banki/"
 breadcrumb: "Не подавать заявки во все банки"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Почему не стоит подавать заявки на ипотеку во все банки","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Organization","name":"Ипотечный брокер Татьяна Стерликова"}}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Почему не стоит подавать заявки на ипотеку во все банки","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Organization","name":"Ипотечный брокер __BROKER_NAME__"}}'
 ---
 
 <section class="page-hero section">
@@ -13,7 +13,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Поче
   <h1>Почему не стоит подавать заявки на ипотеку во все банки подряд</h1>
   <p class="lead">Когда нужна ипотека, кажется логичным отправить анкету сразу везде. Но хаотичные заявки могут запутать ситуацию: появляются отказы, разные условия, повторные запросы и непонимание, какой банк действительно подходит.</p>
   <div class="hero-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/konsultaciya/' | relative_url }}">Разобрать заявку</a>
   </div>
 </section>
@@ -58,7 +58,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Поче
     <p>Не стоит подавать заявки подряд, если уже был отказ, есть просрочки, много кредитов, доход нестандартный, планируется материнский капитал, покупка дома, созаемщик или сделка зависит от продажи старого жилья.</p>
   </article>
   <aside class="sidebar">
-    <div class="seo-panel"><h3>Перед подачей</h3><p>Опишите доход, взнос, объект, кредиты и прошлые заявки. Так проще выбрать следующий шаг.</p><a class="btn btn-primary" href="{{ '/konsultaciya/' | relative_url }}">Бесплатная консультация</a></div>
+    <div class="seo-panel"><h3>Перед подачей</h3><p>Опишите доход, взнос, объект, кредиты и прошлые заявки. Так проще выбрать следующий шаг.</p><a class="btn btn-primary" href="{{ '/konsultaciya/' | relative_url }}">Первичная консультация</a></div>
     <div class="seo-panel"><h3>Связанные темы</h3><ul><li><a href="{{ '/polezno/kak-vybrat-bank-dlya-ipoteki/' | relative_url }}">Как выбрать банк</a></li><li><a href="{{ '/polezno/kak-proverit-kreditnuyu-istoriyu-pered-ipotekoy/' | relative_url }}">Проверить кредитную историю</a></li><li><a href="{{ '/polezno/kreditnaya-nagruzka-pered-ipotekoy/' | relative_url }}">Кредитная нагрузка</a></li><li><a href="{{ '/polezno/predvaritelnoe-odobrenie-ipoteki/' | relative_url }}">Предварительное одобрение</a></li><li><a href="{{ '/uslugi/otkazali-v-ipoteke/' | relative_url }}">Если уже был отказ</a></li><li><a href="{{ '/uslugi/slozhnaya-ipoteka/' | relative_url }}">Сложная ипотека</a></li></ul></div>
   </aside>
 </section>
@@ -84,8 +84,8 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Поче
     <p>Позвоните или напишите: какой объект хотите купить, какой доход, взнос, кредиты и были ли уже обращения в банки.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

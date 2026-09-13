@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Ипотека после просрочек | Татьяна Стерликова"
+title: "Ипотека после просрочек | __BROKER_NAME__"
 description: "Можно ли взять ипотеку после просрочек: что проверить в кредитной истории, как влияют закрытые долги, текущая нагрузка, доход и повторные заявки."
 permalink: "/polezno/ipoteka-posle-prosrochek/"
 breadcrumb: "Ипотека после просрочек"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека после просрочек","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/ipoteka-posle-prosrochek/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека после просрочек","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/ipoteka-posle-prosrochek/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <p class="lead">Просрочки не всегда означают окончательный отказ, но банк будет смотреть всю картину: когда были задержки, закрыты ли долги, какая сейчас нагрузка, доход, взнос и объект покупки.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/uslugi/ipoteka-s-plohoy-kreditnoy-istoriey/' | relative_url }}">Разобрать историю</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -71,7 +71,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <aside class="sidebar">
     <div class="seo-panel">
       <h3>Плохая кредитная история</h3>
-      <p>Татьяна поможет собрать факты по истории, нагрузке, доходу и взносу и определить следующий шаг без обещаний решения за банк.</p>
+      <p>{{ site.data.broker.first_name }} поможет собрать факты по истории, нагрузке, доходу и взносу и определить следующий шаг без обещаний решения за банк.</p>
       <a class="btn btn-primary" href="{{ '/uslugi/ipoteka-s-plohoy-kreditnoy-istoriey/' | relative_url }}">Услуга и консультация</a>
     </div>
     <div class="seo-panel">
@@ -124,11 +124,11 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <div>
     <p class="eyebrow">Были просрочки?</p>
     <h2>Сначала проверьте кредитную историю и нагрузку</h2>
-    <p>Позвоните или напишите Татьяне: когда были просрочки, закрыты ли долги, какой доход, взнос, объект и были ли отказы.</p>
+    <p>Позвоните или напишите {{ site.data.broker.dative }}: когда были просрочки, закрыты ли долги, какой доход, взнос, объект и были ли отказы.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

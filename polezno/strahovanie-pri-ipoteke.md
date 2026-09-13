@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Страхование при ипотеке: как сравнить расходы | Татьяна Стерликова"
+title: "Страхование при ипотеке: как сравнить расходы | __BROKER_NAME__"
 description: "Что проверить по страхованию при ипотеке: требования банка, расходы первого года, влияние условий на платеж, объект, заемщик и сравнение нескольких ипотечных предложений."
 permalink: "/polezno/strahovanie-pri-ipoteke/"
 breadcrumb: "Страхование при ипотеке"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Страхование при ипотеке: как сравнить расходы","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/strahovanie-pri-ipoteke/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Страхование при ипотеке: как сравнить расходы","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/strahovanie-pri-ipoteke/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Стра
   <p class="lead">Сравнивать ипотеку только по рекламной ставке недостаточно. Страховые условия могут влиять на расходы первого года, будущие платежи и итоговую стоимость выбранного банковского маршрута. Конкретные требования нужно проверять по банку, программе, объекту и договору.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=insurance_hero">Сравнить условия онлайн</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/polezno/rashody-pri-oformlenii-ipoteki/' | relative_url }}">Все расходы сделки</a>
   </div>
 </section>
@@ -113,7 +113,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Стра
   </div>
 </section>
 
-<section class="section compact-section"><div class="notice"><div><p class="eyebrow">Клиентам «ЭТАЖИ»</p><h2>Условия подтверждаются до начала работы</h2><p>Если покупка проводится через компанию «ЭТАЖИ», состав ипотечного сопровождения и порядок оплаты зависят от действующих условий компании и параметров конкретной сделки. До начала работы уточните, какие действия входят в услугу и предусмотрена ли отдельная оплата.</p></div><a class="btn btn-dark" href="{{ '/etagi/' | relative_url }}">Уточнить условия</a></div></section>
+
 
 <section class="section related-section">
   <div class="section-head"><p class="eyebrow">Продолжить расчёт</p><h2>Материалы по стоимости ипотечного маршрута</h2></div>
@@ -129,12 +129,12 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Стра
   <div>
     <p class="eyebrow">Сравниваете ипотечные варианты?</p>
     <h2>Соберите платеж, страховку и расходы в одну картину</h2>
-    <p>Передайте банк, программу, объект, цену, взнос, срок и известные страховые условия. Татьяна поможет структурировать сравнение и определить следующий шаг без обещаний заранее получить определённую ставку или стоимость страховки.</p>
+    <p>Передайте банк, программу, объект, цену, взнос, срок и известные страховые условия. {{ site.data.broker.first_name }} поможет структурировать сравнение и определить следующий шаг без обещаний заранее получить определённую ставку или стоимость страховки.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=insurance_footer">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

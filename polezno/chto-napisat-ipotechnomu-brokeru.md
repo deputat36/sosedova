@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Что написать ипотечному брокеру перед консультацией | Татьяна Стерликова"
+title: "Что написать ипотечному брокеру перед консультацией | __BROKER_NAME__"
 description: "Что написать ипотечному брокеру перед консультацией: готовый шаблон сообщения, какие данные указать, какие вопросы задать, как описать доход, объект, взнос, кредиты и прошлые заявки."
 permalink: "/polezno/chto-napisat-ipotechnomu-brokeru/"
 breadcrumb: "Что написать брокеру"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что написать ипотечному брокеру перед консультацией","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/chto-napisat-ipotechnomu-brokeru/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что написать ипотечному брокеру перед консультацией","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/chto-napisat-ipotechnomu-brokeru/"}'
 ---
 
 <section class="page-hero section">
@@ -14,8 +14,8 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что �
   <p class="lead">Чтобы первичный разбор прошел быстрее, лучше сразу кратко описать задачу: что хотите купить, где, какой взнос есть, какой доход, есть ли кредиты и были ли заявки в банки.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=first_message_hero">Передать вводные онлайн</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-light" href="https://vk.com/tatyanasterlikova" rel="noopener">ВКонтакте</a>
+    
+    {% include social-links.html %}
   </div>
 </section>
 
@@ -24,8 +24,8 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что �
     <h2>Готовый шаблон сообщения</h2>
     <div class="notice">
       <div>
-        <p><strong>Здравствуйте, Татьяна. Хочу проконсультироваться по ипотеке.</strong></p>
-        <p>Город: Борисоглебск / Грибановский / Поворино / другой.</p>
+        <p><strong>Здравствуйте, {{ site.data.broker.first_name }}. Хочу проконсультироваться по ипотеке.</strong></p>
+        <p>Город: ваш населённый пункт.</p>
         <p>Что хочу купить: квартира / дом / новостройка / вторичка / строительство.</p>
         <p>Стоимость объекта примерно: ___ ₽.</p>
         <p>Первоначальный взнос: ___ ₽.</p>
@@ -37,7 +37,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что �
     </div>
 
     <h2>Какие данные особенно важны</h2>
-    <p>Для первого разговора не нужно присылать полный комплект документов. Достаточно дать общую картину, чтобы Татьяна поняла задачу и подсказала следующий шаг.</p>
+    <p>Для первого разговора не нужно присылать полный комплект документов. Достаточно дать общую картину, чтобы {{ site.data.broker.first_name }} поняла задачу и подсказала следующий шаг.</p>
     <ul>
       <li>город и район покупки;</li>
       <li>тип объекта: квартира, дом, новостройка, вторичка, строительство;</li>
@@ -54,7 +54,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что �
 
     <h2>Что не нужно писать в первом сообщении</h2>
     <p>Не стоит сразу отправлять фото всех документов, паспортные данные, СНИЛС, коды из сообщений, пароли от банков и личных кабинетов. На первичном этапе достаточно описания ситуации.</p>
-    <p>Если для дальнейшей работы понадобятся документы, Татьяна отдельно объяснит, что именно нужно подготовить и зачем.</p>
+    <p>Если для дальнейшей работы понадобятся документы, {{ site.data.broker.first_name }} отдельно объяснит, что именно нужно подготовить и зачем.</p>
 
     <h2>Если уже был отказ банка</h2>
     <p>Напишите, в какие банки обращались, когда был отказ и что примерно указывали в заявке. Не нужно сразу подавать новые анкеты во все банки подряд: сначала лучше понять, что могло повлиять на решение.</p>
@@ -73,7 +73,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что �
       <h3>Связанные темы</h3>
       <ul>
         <li><a href="{{ '/polezno/kakie-voprosy-zadat-ipotechnomu-brokeru/' | relative_url }}">Вопросы ипотечному брокеру</a></li>
-        <li><a href="{{ '/konsultaciya/' | relative_url }}">Бесплатная консультация</a></li>
+        <li><a href="{{ '/konsultaciya/' | relative_url }}">Первичная консультация</a></li>
         <li><a href="{{ '/kak-prohodit-rabota/' | relative_url }}">Как проходит работа</a></li>
         <li><a href="{{ '/polezno/dokumenty-dlya-ipoteki/' | relative_url }}">Документы для ипотеки</a></li>
         <li><a href="{{ '/polezno/chto-delat-posle-otkaza/' | relative_url }}">Что делать после отказа</a></li>
@@ -117,8 +117,8 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что �
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=first_message_footer">Передать вводные</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

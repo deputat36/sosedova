@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Как выбрать банк для ипотеки | Татьяна Стерликова"
+title: "Как выбрать банк для ипотеки | __BROKER_NAME__"
 description: "Как выбрать банк для ипотеки: сравнить платеж, полную стоимость, требования к доходу и объекту, страховку, расходы и риск отказа до подачи заявки."
 permalink: "/polezno/kak-vybrat-bank-dlya-ipoteki/"
 breadcrumb: "Как выбрать банк"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как выбрать банк для ипотеки","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/kak-vybrat-bank-dlya-ipoteki/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как выбрать банк для ипотеки","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/kak-vybrat-bank-dlya-ipoteki/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
   <p class="lead">Сравнивать стоит не только рекламную ставку. Важно проверить платеж, полную стоимость ипотечного маршрута, требования к доходу и объекту, дополнительные расходы и вероятность того, что конкретный сценарий вообще подходит банку.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=bank_selection_hero">Сравнить варианты онлайн</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/kalkulyator-ipoteki/' | relative_url }}">Рассчитать платеж</a>
   </div>
 </section>
@@ -113,7 +113,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=bank_selection_footer">Сравнить варианты</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    {% include social-links.html %}
   </div>
 </section>

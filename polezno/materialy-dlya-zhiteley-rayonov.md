@@ -1,7 +1,7 @@
 ---
 layout: "default"
-title: "Материалы для жителей районов | Татьяна Стерликова"
-description: "Полезные материалы для жителей Грибановского района, Поворино, Поворинского района и Борисоглебского городского округа: дистанционная консультация, покупка жилья в Борисоглебске и подготовка к просмотру."
+title: "Материалы для жителей районов | __BROKER_NAME__"
+description: "Полезные материалы для покупателей из любого региона России: дистанционная консультация, покупка жилья по России и подготовка к просмотру."
 permalink: "/polezno/materialy-dlya-zhiteley-rayonov/"
 breadcrumb: "Жителям районов"
 og_type: "article"
@@ -10,7 +10,7 @@ og_type: "article"
 <section class="page-hero section">
   <p class="eyebrow">Жителям районов</p>
   <h1>Материалы для жителей районов</h1>
-  <p class="lead">Подборка страниц для тех, кто живет в районе и рассматривает покупку жилья в Борисоглебске или соседних населенных пунктах.</p>
+  <p class="lead">Подборка страниц для тех, кто живет в районе и рассматривает покупку жилья по России или соседних населенных пунктах.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/konsultaciya/' | relative_url }}">Начать с консультации</a>
     <a class="btn btn-secondary" href="{{ '/geo/' | relative_url }}">География работы</a>
@@ -27,10 +27,10 @@ og_type: "article"
   <div class="grid cards-3">
     <article class="card">
       <h3><a href="{{ '/polezno/ipoteka-v-rayone-distantsionno/' | relative_url }}">Как начать дистанционно</a></h3>
-      <p>Что подготовить перед первым обращением, если вы живете не в Борисоглебске.</p>
+      <p>Что подготовить перед первым обращением, если вы живете не по России.</p>
     </article>
     <article class="card">
-      <h3><a href="{{ '/polezno/kupit-zhile-v-borisoglebske-iz-rayona/' | relative_url }}">Покупка в Борисоглебске из района</a></h3>
+      <h3><a href="{{ '/polezno/kupit-zhile-v-borisoglebske-iz-rayona/' | relative_url }}">Покупка по России из района</a></h3>
       <p>Как заранее связать город покупки, объект, сроки и порядок действий.</p>
     </article>
     <article class="card">
@@ -40,17 +40,7 @@ og_type: "article"
   </div>
 </section>
 
-<section class="section muted">
-  <div class="section-head">
-    <p class="eyebrow">Локальные разделы</p>
-    <h2>Страницы по городам и районам</h2>
-  </div>
-  <div class="grid cards-3">
-    <article class="card"><h3><a href="{{ '/geo/borisoglebsk/' | relative_url }}">Борисоглебск</a></h3><p>Страницы по покупке квартиры, дома и отдельным ситуациям.</p></article>
-    <article class="card"><h3><a href="{{ '/geo/gribanovskiy/' | relative_url }}">Грибановский район</a></h3><p>Материалы для жителей пгт Грибановский и района.</p></article>
-    <article class="card"><h3><a href="{{ '/geo/povorino/' | relative_url }}">Поворино и район</a></h3><p>Материалы для жителей Поворино и Поворинского района.</p></article>
-  </div>
-</section>
+
 
 <section class="section cta-section">
   <div>
@@ -60,8 +50,8 @@ og_type: "article"
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/konsultaciya/' | relative_url }}">Консультация</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВКонтакте</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

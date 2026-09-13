@@ -1,19 +1,19 @@
 ---
 layout: "default"
-title: "Как подготовиться к просмотру жилья в Борисоглебске из района | Татьяна Стерликова"
-description: "Что проверить перед поездкой на просмотр квартиры или дома в Борисоглебске, если вы живете в районе: бюджет, ипотека, документы, аванс, сроки, объект и вопросы продавцу."
+title: "Как подготовиться к просмотру жилья по России из района | __BROKER_NAME__"
+description: "Что проверить перед поездкой на просмотр квартиры или дома по России, если вы живете в районе: бюджет, ипотека, документы, аванс, сроки, объект и вопросы продавцу."
 permalink: "/polezno/prosmotr-zhilya-v-borisoglebske-iz-rayona/"
 breadcrumb: "Просмотр жилья из района"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как подготовиться к просмотру жилья в Борисоглебске из района","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/prosmotr-zhilya-v-borisoglebske-iz-rayona/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как подготовиться к просмотру жилья по России из района","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/prosmotr-zhilya-v-borisoglebske-iz-rayona/"}'
 ---
 
 <section class="page-hero section">
   <p class="eyebrow">Перед поездкой на просмотр</p>
-  <h1>Как подготовиться к просмотру жилья в Борисоглебске из района</h1>
-  <p class="lead">Если вы живете в Грибановском районе, Поворино, Поворинском районе или другом населенном пункте, поездку на просмотр жилья в Борисоглебске лучше подготовить заранее. Так проще не тратить день впустую и не принимать решение под давлением.</p>
+  <h1>Как подготовиться к просмотру жилья по России из района</h1>
+  <p class="lead">Если вы живёте в другом городе или населённом пункте, поездку на просмотр жилья по России лучше подготовить заранее. Так проще не тратить день впустую и не принимать решение под давлением.</p>
   <div class="hero-actions">
-    <a class="btn btn-primary" href="{{ '/polezno/kupit-zhile-v-borisoglebske-iz-rayona/' | relative_url }}">Покупка в Борисоглебске</a>
+    <a class="btn btn-primary" href="{{ '/polezno/kupit-zhile-v-borisoglebske-iz-rayona/' | relative_url }}">Покупка по России</a>
     <a class="btn btn-secondary" href="{{ '/konsultaciya/' | relative_url }}">Консультация</a>
   </div>
 </section>
@@ -64,7 +64,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
       <h3>Связанные материалы</h3>
       <ul>
         <li><a href="{{ '/polezno/materialy-dlya-zhiteley-rayonov/' | relative_url }}">Все материалы для жителей районов</a></li>
-        <li><a href="{{ '/polezno/kupit-zhile-v-borisoglebske-iz-rayona/' | relative_url }}">Купить жилье в Борисоглебске из района</a></li>
+        <li><a href="{{ '/polezno/kupit-zhile-v-borisoglebske-iz-rayona/' | relative_url }}">Купить жилье по России из района</a></li>
         <li><a href="{{ '/polezno/avans-zadatok-i-ipoteka/' | relative_url }}">Аванс, задаток и ипотека</a></li>
         <li><a href="{{ '/polezno/chto-proverit-pered-pokupkoy-vtorichnogo-zhilya/' | relative_url }}">Проверка вторичного жилья</a></li>
         <li><a href="{{ '/polezno/chto-proverit-pered-pokupkoy-doma-v-ipoteku/' | relative_url }}">Проверка дома</a></li>
@@ -73,10 +73,10 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
     <div class="seo-panel">
       <h3>Локальные страницы</h3>
       <ul>
-        <li><a href="{{ '/geo/borisoglebsk/ipoteka-na-kvartiru/' | relative_url }}">Квартира в Борисоглебске</a></li>
-        <li><a href="{{ '/geo/borisoglebsk/ipoteka-na-dom/' | relative_url }}">Дом в Борисоглебске</a></li>
-        <li><a href="{{ '/geo/gribanovskiy/' | relative_url }}">Грибановский район</a></li>
-        <li><a href="{{ '/geo/povorino/' | relative_url }}">Поворино и район</a></li>
+        
+        
+        
+        
       </ul>
     </div>
   </aside>

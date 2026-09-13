@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Действующие кредиты перед ипотекой: как влияют на заявку | Татьяна Стерликова"
+title: "Действующие кредиты перед ипотекой: как влияют на заявку | __BROKER_NAME__"
 description: "Как действующие кредиты, рассрочки и платежи влияют на ипотечную заявку: долговая нагрузка, комфортный платеж, закрытие кредитов и подготовка к банку."
 permalink: "/polezno/deystvuyushchie-kredity-pered-ipotekoy/"
 breadcrumb: "Действующие кредиты перед ипотекой"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Действующие кредиты перед ипотекой: как влияют на заявку","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Organization","name":"Ипотечный брокер Татьяна Стерликова"}}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Действующие кредиты перед ипотекой: как влияют на заявку","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Organization","name":"Ипотечный брокер __BROKER_NAME__"}}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Дейс
   <p class="lead">Наличие кредитов не означает автоматический отказ по ипотеке. Важно другое: какой доход остаётся после текущих платежей, какие обязательства открыты, есть ли кредитные карты и насколько реалистичен будущий ипотечный платёж.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=existing_loans_hero">Разобрать нагрузку онлайн</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/konsultaciya/' | relative_url }}">Как проходит консультация</a>
   </div>
 </section>
@@ -77,12 +77,12 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Дейс
   <div>
     <p class="eyebrow">Есть кредиты или рассрочки?</p>
     <h2>Разберите нагрузку до заявки</h2>
-    <p>Передайте доход, действующие кредиты, платежи, кредитные карты, взнос и объект покупки. Татьяна поможет структурировать ситуацию и определить следующий шаг без обещаний заранее одобрить ипотеку.</p>
+    <p>Передайте доход, действующие кредиты, платежи, кредитные карты, взнос и объект покупки. {{ site.data.broker.first_name }} поможет структурировать ситуацию и определить следующий шаг без обещаний заранее одобрить ипотеку.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=existing_loans_footer">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

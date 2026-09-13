@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Оценка ниже цены продавца по ипотеке | Татьяна Стерликова"
+title: "Оценка ниже цены продавца по ипотеке | __BROKER_NAME__"
 description: "Что делать, если оценка недвижимости для ипотеки оказалась ниже цены продавца: как проверить сумму кредита, собственные средства, аванс и следующий шаг по сделке."
 permalink: "/polezno/ocenka-nizhe-ceny-prodavca/"
 breadcrumb: "Оценка ниже цены продавца"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Оценка ниже цены продавца по ипотеке","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/ocenka-nizhe-ceny-prodavca/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Оценка ниже цены продавца по ипотеке","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/ocenka-nizhe-ceny-prodavca/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Оцен
   <p class="lead">Если оценочная стоимость ниже цены покупки, меняется не только цифра в отчёте: может измениться доступная сумма кредита и объём собственных средств. Сначала нужно получить расчёт по конкретной сделке, а уже потом решать вопрос с ценой, взносом или объектом.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Другая ситуация' | url_encode }}&amp;placement=appraisal_gap_hero">Разобрать расчёт онлайн</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -52,7 +52,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Оцен
     <p>Низкая оценочная стоимость и отказ банка принять объект — не одно и то же. Если есть замечания к документам, характеристикам недвижимости или самой структуре сделки, используйте отдельный материал <a class="text-link" href="{{ '/polezno/pochemu-bank-ne-odobryaet-obekt-ipoteki/' | relative_url }}">«Почему банк не одобряет объект»</a>.</p>
 
     <h2>Чем поможет ипотечный брокер</h2>
-    <p>Татьяна поможет сопоставить цену, оценку, первоначальный взнос, объект и доступный банковский маршрут. Брокер не заменяет оценщика или юриста и не определяет решение банка, но помогает посчитать последствия до следующего шага по сделке.</p>
+    <p>{{ site.data.broker.first_name }} поможет сопоставить цену, оценку, первоначальный взнос, объект и доступный банковский маршрут. Брокер не заменяет оценщика или юриста и не определяет решение банка, но помогает посчитать последствия до следующего шага по сделке.</p>
   </article>
 
   <aside class="sidebar">
@@ -102,7 +102,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Оцен
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Другая ситуация' | url_encode }}&amp;placement=appraisal_gap_final">Разобрать ситуацию</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить</a>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>
+    {% include social-links.html %}
   </div>
 </section>

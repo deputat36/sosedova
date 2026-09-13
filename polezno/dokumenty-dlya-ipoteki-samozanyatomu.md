@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Документы для ипотеки самозанятому | Татьяна Стерликова"
+title: "Документы для ипотеки самозанятому | __BROKER_NAME__"
 description: "Какие документы подготовить самозанятому для ипотеки: доход, занятость, поступления, кредитная нагрузка, объект, первоначальный взнос и консультация брокера."
 permalink: "/polezno/dokumenty-dlya-ipoteki-samozanyatomu/"
 breadcrumb: "Документы самозанятому"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Документы для ипотеки самозанятому","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/dokumenty-dlya-ipoteki-samozanyatomu/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Документы для ипотеки самозанятому","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/dokumenty-dlya-ipoteki-samozanyatomu/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Доку
   <p class="lead">Самозанятому важно показать банку не только сумму дохода, но и понятный источник поступлений, период деятельности, кредитную нагрузку и готовность к сделке. Точный пакет документов зависит от банка и ситуации.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/uslugi/ipoteka-dlya-ip-samozanyatyh/' | relative_url }}">Разобрать заявку</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -69,7 +69,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Доку
   <aside class="sidebar">
     <div class="seo-panel">
       <h3>Ипотека для самозанятого</h3>
-      <p>Татьяна поможет понять, какие сведения подготовить и какие риски проверить до подачи заявки. Финальный перечень документов определяет выбранный банк.</p>
+      <p>{{ site.data.broker.first_name }} поможет понять, какие сведения подготовить и какие риски проверить до подачи заявки. Финальный перечень документов определяет выбранный банк.</p>
       <a class="btn btn-primary" href="{{ '/uslugi/ipoteka-dlya-ip-samozanyatyh/' | relative_url }}">Услуга и консультация</a>
     </div>
     <div class="seo-panel">
@@ -122,11 +122,11 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Доку
   <div>
     <p class="eyebrow">Самозанятый и нужна ипотека?</p>
     <h2>Сначала проверьте документы и нагрузку</h2>
-    <p>Позвоните или напишите Татьяне: город, объект, взнос, доход, кредиты и были ли заявки в банки.</p>
+    <p>Позвоните или напишите {{ site.data.broker.dative }}: город, объект, взнос, доход, кредиты и были ли заявки в банки.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Ошибки при подготовке к ипотеке | Татьяна Стерликова"
+title: "Ошибки при подготовке к ипотеке | __BROKER_NAME__"
 description: "Практический разбор ошибок перед ипотекой: хаотичные заявки, новые кредиты, карты, доход, объект, аванс, документы и отсутствие финансового запаса."
 permalink: "/polezno/oshibki-pri-podgotovke-k-ipoteke/"
 breadcrumb: "Ошибки перед ипотекой"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ошибки при подготовке к ипотеке","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/oshibki-pri-podgotovke-k-ipoteke/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ошибки при подготовке к ипотеке","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/oshibki-pri-podgotovke-k-ipoteke/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ошиб
   <p class="lead">Большинство проблем начинается не в момент решения банка, а раньше: при хаотичных заявках, новых кредитах, неподходящем объекте, поспешном задатке или неполных вводных.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source=%2Fpolezno%2Foshibki-pri-podgotovke-k-ipoteke%2F&amp;scenario=Первичная%20консультация%20и%20подбор%20ипотеки">Проверить готовность</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -119,8 +119,8 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ошиб
     <p>Чем полнее исходные данные, тем меньше риск хаотичных заявок, неподходящего объекта и поспешных обязательств.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

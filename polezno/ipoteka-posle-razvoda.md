@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Ипотека после развода: что проверить до заявки | Татьяна Стерликова"
+title: "Ипотека после развода: что проверить до заявки | __BROKER_NAME__"
 description: "Что проверить перед ипотекой после развода: доход, алименты, дети, общие кредиты, старая ипотека, созаемщик, материнский капитал, взнос и объект."
 permalink: "/polezno/ipoteka-posle-razvoda/"
 breadcrumb: "Ипотека после развода"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека после развода: что проверить до заявки","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/ipoteka-posle-razvoda/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека после развода: что проверить до заявки","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/ipoteka-posle-razvoda/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <p class="lead">После развода меняется не только семейное положение. Могут измениться доход семьи, расходы на детей, алименты, состав заемщиков, действующие кредиты и планы по старому жилью. Перед новой ипотечной заявкой полезно собрать эту картину целиком.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Другая ситуация' | url_encode }}&amp;placement=divorce_hero">Разобрать ситуацию онлайн</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/konsultaciya/' | relative_url }}">Как проходит консультация</a>
   </div>
 </section>
@@ -120,12 +120,12 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <div>
     <p class="eyebrow">Планируете ипотеку после развода?</p>
     <h2>Сначала соберите новую финансовую картину</h2>
-    <p>Передайте доход, алименты, кредиты, старую ипотеку, взнос, маткапитал и объект покупки. Татьяна поможет структурировать ипотечную часть ситуации и определить следующий шаг без обещаний решения банка.</p>
+    <p>Передайте доход, алименты, кредиты, старую ипотеку, взнос, маткапитал и объект покупки. {{ site.data.broker.first_name }} поможет структурировать ипотечную часть ситуации и определить следующий шаг без обещаний решения банка.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Другая ситуация' | url_encode }}&amp;placement=divorce_footer">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

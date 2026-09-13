@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Какие вопросы задать ипотечному брокеру | Татьяна Стерликова"
+title: "Какие вопросы задать ипотечному брокеру | __BROKER_NAME__"
 description: "Какие вопросы задать ипотечному брокеру перед заявкой: по шансам, банкам, платежу, документам, объекту, срокам, расходам, отказам и сопровождению сделки."
 permalink: "/polezno/kakie-voprosy-zadat-ipotechnomu-brokeru/"
 breadcrumb: "Вопросы брокеру"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Какие вопросы задать ипотечному брокеру","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/kakie-voprosy-zadat-ipotechnomu-brokeru/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Какие вопросы задать ипотечному брокеру","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/kakie-voprosy-zadat-ipotechnomu-brokeru/"}'
 ---
 
 <section class="page-hero section">
@@ -15,7 +15,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Каки
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=broker_questions_hero">Задать вопросы онлайн</a>
     <a class="btn btn-light" href="{{ '/konsultaciya/' | relative_url }}">Как проходит консультация</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -88,7 +88,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Каки
   </div>
 </section>
 
-<section class="section compact-section"><div class="notice"><div><p class="eyebrow">Клиентам «ЭТАЖИ»</p><h2>Условия подтверждаются до начала работы</h2><p>Если покупка проводится через компанию «ЭТАЖИ», состав ипотечного сопровождения и порядок оплаты зависят от действующих условий компании и параметров конкретной сделки. До начала работы уточните, какие действия входят в услугу и предусмотрена ли отдельная оплата.</p></div><a class="btn btn-dark" href="{{ '/etagi/' | relative_url }}">Уточнить условия</a></div></section>
+
 
 <section class="section cta-section">
   <div>
@@ -98,8 +98,8 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Каки
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=broker_questions_footer">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

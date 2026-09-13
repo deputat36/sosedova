@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Семейная ипотека: что проверить перед заявкой | Борисоглебск"
+title: "Семейная ипотека: что проверить перед заявкой | Ипотека по России"
 description: "Практический чек-лист семейной ипотеки: семья, заемщики, объект, первоначальный взнос, маткапитал, документы и порядок действий до задатка."
 permalink: "/polezno/semeynaya-ipoteka-voprosy/"
 og_type: "article"
@@ -12,7 +12,7 @@ og_type: "article"
   <p class="lead">Подходить по семейной ситуации недостаточно. Нужно отдельно проверить заемщиков, выбранный объект, собственные средства, документы и актуальные правила программы.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source=%2Fpolezno%2Fsemeynaya-ipoteka-voprosy%2F&amp;scenario=Семейная%20ипотека">Проверить свой сценарий</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -102,7 +102,7 @@ og_type: "article"
     <p>Так легче понять реальный маршрут до подачи заявки и не ориентироваться только на рекламное название программы.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">Написать ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    {% include social-links.html %}
   </div>
 </section>

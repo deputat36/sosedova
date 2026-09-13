@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Ипотека с маленькой официальной зарплатой: что проверить | Татьяна Стерликова"
+title: "Ипотека с маленькой официальной зарплатой: что проверить | __BROKER_NAME__"
 description: "Что проверить перед ипотекой при небольшой официальной зарплате: подтверждение дохода, кредиты, созаемщик, первоначальный взнос и безопасный платеж."
 permalink: "/polezno/ipoteka-s-malenkoy-oficialnoy-zarplatoy/"
 breadcrumb: "Маленькая официальная зарплата"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека с маленькой официальной зарплатой: что проверить","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/ipoteka-s-malenkoy-oficialnoy-zarplatoy/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека с маленькой официальной зарплатой: что проверить","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/ipoteka-s-malenkoy-oficialnoy-zarplatoy/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <p class="lead">Небольшая официальная зарплата не описывает всю финансовую ситуацию. Перед заявкой важно понять, какой доход можно подтвердить допустимым для выбранного банка способом, какие обязательства уже есть и какой платеж останется безопасным для бюджета.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=small_salary_hero">Разобрать доход онлайн</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/uslugi/ipoteka-bez-oficialnogo-dohoda/' | relative_url }}">Нестандартный доход</a>
   </div>
 </section>
@@ -102,12 +102,12 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <div>
     <p class="eyebrow">Официальная зарплата ниже реального дохода?</p>
     <h2>Проверьте, какую картину можно подтвердить</h2>
-    <p>Передайте формат работы, доход, кредиты, взнос и объект. Татьяна поможет структурировать банковский маршрут без недостоверных сведений и обещаний одобрения.</p>
+    <p>Передайте формат работы, доход, кредиты, взнос и объект. {{ site.data.broker.first_name }} поможет структурировать банковский маршрут без недостоверных сведений и обещаний одобрения.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=small_salary_footer">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

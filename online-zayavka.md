@@ -1,20 +1,20 @@
 ---
 layout: "default"
-title: "Онлайн-заявка ипотечному брокеру | Татьяна Стерликова"
+title: "Онлайн-заявка ипотечному брокеру | __BROKER_NAME__"
 description: "Заполните и отправьте короткую онлайн-заявку на консультацию и ипотечное сопровождение из любого города. Подробные финансовые сведения можно добавить по желанию."
 permalink: "/online-zayavka/"
 breadcrumb: "Онлайн-заявка"
 og_type: "website"
-schema: '{"@context":"https://schema.org","@type":"Service","name":"Дистанционная консультация ипотечного брокера","description":"Первичный разбор ипотечной ситуации и подготовка дальнейшего маршрута в дистанционном формате.","provider":{"@type":"Person","name":"Татьяна Стерликова","telephone":"+79030250807"},"areaServed":{"@type":"Country","name":"Россия"},"serviceType":"Онлайн-консультация и сопровождение по ипотеке","url":"https://sterlikova-ipoteka.ru/online-zayavka/"}'
+schema: '{"@context":"https://schema.org","@type":"Service","name":"Дистанционная консультация ипотечного брокера","description":"Первичный разбор ипотечной ситуации и подготовка дальнейшего маршрута в дистанционном формате.","provider":{"@type":"Person","name":"__BROKER_NAME__","telephone":"__BROKER_PHONE__"},"areaServed":{"@type":"Country","name":"Россия"},"serviceType":"Онлайн-консультация и сопровождение по ипотеке","url":"__SITE_URL__/online-zayavka/"}'
 ---
 
 <section class="page-hero section">
   <p class="eyebrow">Дистанционно из любого города</p>
   <h1>Онлайн-заявка ипотечному брокеру</h1>
-  <p class="lead">Для первого обращения достаточно имени, телефона, города и задачи. Стоимость объекта, взнос, доход и историю обращений в банки можно добавить по желанию.</p>
+  <p class="lead">Для первого обращения достаточно имени, телефона и задачи. Стоимость объекта, взнос, доход и историю обращений в банки можно добавить по желанию.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="#application-form">Заполнить короткую заявку</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>
     <a class="btn btn-light" href="{{ '/konsultaciya/' | relative_url }}">Как проходит консультация</a>
   </div>
   <ul class="trust-list"><li>Можно обратиться из любого города</li><li>Обязательных полей немного</li><li>Решение принимает банк</li></ul>
@@ -64,15 +64,15 @@ schema: '{"@context":"https://schema.org","@type":"Service","name":"Дистан
           <small class="application-field-hint" id="application-phone-hint">Введите 10 цифр российского номера. Подойдут форматы +7 или 8.</small>
         </div>
         <div class="application-field">
-          <label for="application-city">Город или населённый пункт <span aria-hidden="true">*</span></label>
-          <input id="application-city" name="city" type="text" autocomplete="address-level2" autocapitalize="words" required maxlength="120" enterkeyhint="next" placeholder="Можно указать любой город">
+          <label for="application-city">Город или населённый пункт (необязательно)</label>
+          <input id="application-city" name="city" type="text" autocomplete="address-level2" autocapitalize="words" maxlength="120" enterkeyhint="next" placeholder="Можно указать любой город">
         </div>
         <div class="application-field">
           <label for="application-contact">Удобный способ связи</label>
           <select id="application-contact" name="preferred_contact">
             <option value="Позвонить">Позвонить</option>
-            <option value="MAX">MAX</option>
-            <option value="ВКонтакте">ВКонтакте</option>
+            {% if site.data.social.max != '' %}<option value="MAX">MAX</option>{% endif %}
+            {% if site.data.social.vk != '' %}<option value="ВКонтакте">ВКонтакте</option>{% endif %}
             <option value="SMS">SMS</option>
           </select>
         </div>
@@ -153,7 +153,7 @@ schema: '{"@context":"https://schema.org","@type":"Service","name":"Дистан
         <span>Я согласен на обработку и передачу указанных сведений для рассмотрения заявки и обратной связи, ознакомился с <a href="{{ '/policy/' | relative_url }}">политикой обработки данных</a> и <a href="{{ '/personal-data-consent/' | relative_url }}">текстом согласия</a>.</span>
       </label>
 
-      <p class="application-privacy">После проверки и нажатия «Отправить заявку онлайн» сведения передаются через сервис Web3Forms в настроенный email-канал. Не указывайте паспортные данные, СНИЛС, реквизиты карт, коды подтверждения и не прикладывайте документы.</p>
+      <p class="application-privacy">{% if site.lead_capture.mode == 'disabled' %}Форма готовит текст в вашем браузере. Проверьте его и отправьте через SMS или скопируйте в удобный канал связи.{% else %}Передача начинается после проверки и отдельного нажатия кнопки отправки.{% endif %} Не указывайте паспортные данные, СНИЛС, реквизиты карт, коды подтверждения и не прикладывайте документы.</p>
       <button class="btn btn-primary application-submit" type="submit" data-application-submit disabled aria-busy="true">Проверить и подготовить заявку</button>
       <p class="application-status" data-application-status aria-live="polite">Загружаем форму…</p>
     </form>
@@ -162,50 +162,44 @@ schema: '{"@context":"https://schema.org","@type":"Service","name":"Дистан
       <p class="eyebrow">Заявка готова</p>
       <h2>Проверьте текст и отправьте удобным способом</h2>
       <textarea data-application-output rows="16" readonly aria-label="Подготовленный текст заявки"></textarea>
-      <p class="application-delivery-note" data-application-delivery-note>После проверки нажмите «Отправить заявку онлайн». При технической ошибке используйте резервный способ.</p>
+      <p class="application-delivery-note" data-application-delivery-note>Проверьте текст и выберите доступный способ отправки.</p>
       <div class="application-actions">
         <button class="btn btn-primary" type="button" data-application-direct-send hidden>Отправить заявку онлайн</button>
         <button class="btn btn-secondary" type="button" data-application-share>Поделиться заявкой</button>
         <a class="btn btn-secondary" href="#" data-application-sms>Отправить SMS</a>
         <button class="btn btn-light" type="button" data-application-copy>Скопировать текст</button>
-        <a class="btn btn-light" href="https://vk.com/tatyanasterlikova" target="_blank" rel="noopener" data-application-vk>Открыть ВКонтакте</a>
-        <button class="btn btn-light" type="button" data-copy-phone>Скопировать номер для MAX</button>
+        {% include social-links.html %}
+        
       </div>
-      <p class="application-hint">После успешной онлайн-отправки откроется страница подтверждения с номером обращения. Резервные способы остаются доступны до перехода.</p>
+      <p class="application-hint">Подготовка и копирование текста ещё не означают отправку. Завершите отправку в выбранном приложении.</p>
     </section>
   </div>
 
   <aside class="application-aside">
     <div class="seo-panel">
       <h3>Короткой заявки достаточно</h3>
-      <p>Для первого контакта нужны имя, телефон, город и задача. Остальные сведения можно уточнить во время разговора.</p>
+      <p>Для первого контакта нужны имя, телефон и задача. Остальные сведения можно уточнить во время разговора.</p>
     </div>
     <div class="seo-panel">
       <h3>Что произойдёт после обращения</h3>
       <ol>
-        <li>Заявка поступит в настроенный email-канал с номером и источником обращения.</li>
-        <li>Татьяна изучит основные вводные.</li>
+        <li>Вы отправляете подготовленное обращение выбранным способом.</li>
+        <li>{{ site.data.broker.first_name }} изучит основные вводные.</li>
         <li>Уточнит недостающие сведения.</li>
         <li>Предложит следующий шаг и формат работы.</li>
       </ol>
     </div>
     <div class="seo-panel">
       <h3>География работы</h3>
-      <p>Первичную консультацию можно провести дистанционно из любого города. Локальные страницы Борисоглебска, Грибановского района и Поворино не ограничивают обращения из других регионов.</p>
-      <p><a href="{{ '/geo/' | relative_url }}">Перейти к региональным материалам →</a></p>
+      <p>Первичную консультацию можно провести дистанционно из любого города. Укажите регион покупки, если он отличается от места проживания.</p>
+      <p><a href="{{ '/geo/' | relative_url }}">Подробнее о дистанционной работе →</a></p>
     </div>
   </aside>
 </section>
 
-<section class="section muted">
-  <div class="section-head"><p class="eyebrow">Два формата</p><h2>Частный онлайн-клиент или покупка через «ЭТАЖИ»</h2><p>При частном обращении объём и стоимость сопровождения согласуются после первичного разбора. Для сделки через компанию «ЭТАЖИ» состав услуги и порядок оплаты подтверждаются по действующим условиям компании и параметрам конкретной сделки.</p></div>
-  <div class="grid cards-2">
-    <article class="card"><h3>Частное дистанционное обращение</h3><p>Консультация, разбор ситуации и согласованный объём дальнейшей работы. Место проживания само по себе не мешает первичному онлайн-разбору.</p><a class="text-link" href="{{ '/stoimost/' | relative_url }}">Посмотреть частные тарифы →</a></article>
-    <article class="card"><h3>Сделка через компанию «ЭТАЖИ»</h3><p>До начала сопровождения уточните, какие действия входят в услугу по линии компании и предусмотрена ли отдельная оплата в вашей ситуации.</p><a class="text-link" href="{{ '/etagi/' | relative_url }}">Уточнить условия «ЭТАЖИ» →</a></article>
-  </div>
-</section>
 
-<section class="section cta-section"><div><p class="eyebrow">Нужен быстрый ответ?</p><h2>Можно не заполнять анкету</h2><p>Позвоните или напишите кратко: ваш город, цель и были ли обращения в банки.</p></div><div class="cta-actions"><a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a><button class="btn btn-secondary" type="button" data-copy-phone>MAX</button><a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВКонтакте</a></div></section>
+
+<section class="section cta-section"><div><p class="eyebrow">Нужен быстрый ответ?</p><h2>Можно не заполнять анкету</h2><p>Позвоните или напишите кратко: ваш город, цель и были ли обращения в банки.</p></div><div class="cta-actions"><a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>{% include social-links.html %}</div></section>
 
 <script>(function(){var form=document.querySelector('[data-online-application]');if(!form)return;window.setTimeout(function(){if(form.dataset.applicationReady==='true')return;var fallback=document.querySelector('[data-application-runtime-fallback]'),status=form.querySelector('[data-application-status]');if(fallback)fallback.hidden=false;if(status){status.textContent='Форма не загрузилась. Используйте резервный способ обращения выше.';status.classList.add('is-error');}},5000);})();</script>
 <script src="{{ '/assets/js/thankyou-storage-privacy.js' | relative_url }}" defer></script>

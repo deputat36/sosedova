@@ -5,7 +5,7 @@ description: "Когда нужен созаемщик по ипотеке, ка
 permalink: "/polezno/sozaemshchik-po-ipoteke/"
 breadcrumb: "Созаемщик по ипотеке"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Созаемщик по ипотеке: когда помогает и какие риски проверить","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/sozaemshchik-po-ipoteke/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Созаемщик по ипотеке: когда помогает и какие риски проверить","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/sozaemshchik-po-ipoteke/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Соза
   <p class="lead">Второй заемщик меняет общий расчет заявки: банк оценивает доходы и обязательства участников по своим правилам. Поэтому до подачи важно проверить не только дополнительный доход, но и кредиты, кредитную историю, занятость и роль каждого человека в сделке.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=coborrower_hero">Разобрать состав заемщиков</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -93,11 +93,11 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Соза
   <div>
     <p class="eyebrow">Перед совместной заявкой</p>
     <h2>Сначала проверьте профиль каждого заемщика</h2>
-    <p>Укажите участников, подтверждаемый доход, кредиты, взнос и объект. Татьяна поможет собрать вводные для сравнения вариантов.</p>
+    <p>Укажите участников, подтверждаемый доход, кредиты, взнос и объект. {{ site.data.broker.first_name }} поможет собрать вводные для сравнения вариантов.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=coborrower_final">Разобрать состав заявки</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить</a>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>
+    {% include social-links.html %}
   </div>
 </section>
