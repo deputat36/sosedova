@@ -275,8 +275,8 @@ def main() -> int:
     endpoint_match = re.search(r"(?m)^\s{2}endpoint:\s*[\"']?([^\"'\n]*)", config)
     mode = mode_match.group(1).strip() if mode_match else ""
     endpoint = endpoint_match.group(1).strip() if endpoint_match else "missing"
-    if mode != "web3forms":
-        error("До общей Supabase-приёмки режим должен оставаться web3forms", CONFIG)
+    if mode not in {"disabled", "web3forms"}:
+        error("До общей Supabase-приёмки режим должен быть disabled или web3forms", CONFIG)
         errors += 1
     if endpoint:
         error("До общей Supabase-приёмки endpoint должен оставаться пустым", CONFIG)

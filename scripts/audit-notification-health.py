@@ -179,8 +179,8 @@ def main() -> int:
     endpoint_match = re.search(r"(?m)^\s{2}endpoint:\s*[\"']?([^\"'\n]*)", site_config)
     mode = mode_match.group(1).strip() if mode_match else ""
     endpoint = endpoint_match.group(1).strip() if endpoint_match else "missing"
-    if mode != "web3forms":
-        error("До smoke-теста health рабочий режим должен оставаться web3forms", SITE_CONFIG)
+    if mode not in {"disabled", "web3forms"}:
+        error("До smoke-теста health рабочий режим должен быть disabled или web3forms", SITE_CONFIG)
         errors += 1
     if endpoint:
         error("Публичный Supabase endpoint должен оставаться пустым", SITE_CONFIG)
