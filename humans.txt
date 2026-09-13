@@ -1,28 +1,8 @@
-/* TEAM */
-
-Name: Татьяна Стерликова
-Role: Ипотечный брокер
-Location: Борисоглебск, Воронежская область
-Contact: +7 903 025-08-07
-VK: https://vk.com/tatyanasterlikova
-
-/* SITE */
-
-Site: Ипотечный брокер Татьяна Стерликова
-URL: https://sterlikova-ipoteka.ru/
-Language: Russian
-Audience: покупатели жилья в Борисоглебске, Борисоглебском городском округе, Грибановском районе и Поворинском районе
-Purpose: консультации по ипотеке, подбор ипотечного маршрута, подготовка документов и сопровождение заявки без обещаний гарантированного одобрения
-
-/* PRINCIPLES */
-
-- Первичная консультация бесплатная.
-- Окончательное решение по ипотеке, сумме, ставке и объекту принимает банк.
-- Сайт не обещает 100% одобрение и не заменяет решение банка, оценщика или юриста.
-- Для клиента компании ЭТАЖИ состав ипотечного сопровождения и порядок оплаты подтверждаются по действующим условиям компании и параметрам конкретной сделки до начала работы.
-
-/* TECH */
-
-Static site hosted on GitHub Pages.
-Sitemap: https://sterlikova-ipoteka.ru/sitemap.xml
-LLMS: https://sterlikova-ipoteka.ru/llms.txt
+---
+layout: null
+sitemap: false
+---
+{{ site.data.broker.brand }}
+{{ site.data.broker.name }} — {{ site.data.broker.role }}
+{{ site.data.broker.coverage }}
+{{ site.url }}

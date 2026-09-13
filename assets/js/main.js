@@ -1,7 +1,7 @@
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('#main-nav');
 const copyPhoneButtons = document.querySelectorAll('[data-copy-phone]');
-const maxPhone = '89030250807';
+const maxPhone = (window.brokerConfig || {}).phone || '';
 const TRACKING_KEYS = [
   'utm_source',
   'utm_medium',
@@ -22,7 +22,7 @@ const TRACKING_KEYS = [
   'lead_source',
   'placement'
 ];
-const TRACKING_STORAGE_KEY = 'sterlikovaMortgageTracking';
+const TRACKING_STORAGE_KEY = 'brokerMortgageTracking';
 const TRACKING_STORAGE_VERSION = 2;
 const TRACKING_RETENTION_DAYS = 90;
 const TRACKING_RETENTION_MS = TRACKING_RETENTION_DAYS * 24 * 60 * 60 * 1000;
@@ -263,7 +263,7 @@ document.addEventListener('click', (event) => {
   if (!link) return;
   const href = link.getAttribute('href') || '';
   if (href.indexOf('tel:') === 0) sendGoal('phone_click');
-  if (href.indexOf('vk.com/tatyanasterlikova') !== -1) sendGoal('vk_click');
+  if (link.dataset.social === 'vk') sendGoal('vk_click');
   if (href.indexOf('/online-zayavka/') !== -1) sendGoal('online_application_click');
   if (href.indexOf('/konsultaciya/') !== -1) sendGoal('consultation_click');
   if (href.indexOf('/kontakty/') !== -1) sendGoal('contacts_click');

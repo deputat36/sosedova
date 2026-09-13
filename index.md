@@ -1,54 +1,20 @@
 ---
-layout: "default"
-title: "Ипотечный брокер Людмила Соседова | Ипотека по России"
-description: "Людмила Соседова — ипотечный брокер с опытом более 15 лет. Помощь в подборе ипотеки, семейной ипотеки, строительстве дома и сложных случаях."
-hero_photo: "/assets/img/sosedova-hero.webp"
-schema: '{"@context":"https://schema.org","@type":"FinancialService","name":"Соседова Ипотека","description":"Помощь в подборе ипотечных программ и подготовке заявок в банки.","areaServed":["Россия","Балашов","Саратовская область"],"telephone":"+79172155525","url":"https://sosedova-ipoteka.ru/"}'
+"layout": "default"
+"title": "Ипотечный брокер онлайн по России | __BROKER_NAME__"
+"description": "Помощь с ипотекой по всей России: подбор программы, подготовка заявки,\
+  \ сложные случаи. __BROKER_NAME__ — 15+ лет опыта. Обсудите вашу ситуацию."
+"permalink": "/"
 ---
 
 <section class="hero section">
-<div class="hero-content">
-<p class="eyebrow">Онлайн по России · Балашов и Саратовская область</p>
-<h1>Ипотека без лишних сложностей</h1>
-<p class="lead">Людмила Соседова поможет подобрать ипотечную программу, подготовить заявку и пройти путь от первого вопроса до решения банка.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}">Получить консультацию</a>
-<a class="btn btn-light" href="tel:+79172155525">Позвонить</a>
-</div>
-<ul class="trust-list">
-<li>15+ лет опыта в ипотеке</li>
-<li>Работа с клиентами из любого региона России</li>
-<li>Подбор решений под ситуацию клиента</li>
-</ul>
-</div>
-<aside class="hero-card hero-card-photo">
-<figure class="portrait-frame">
-<img src="{{ page.hero_photo | relative_url }}" alt="Людмила Соседова, ипотечный брокер" width="360" height="450">
-<figcaption><strong>Людмила Соседова</strong><span>ипотечный брокер</span></figcaption>
-</figure>
-</aside>
-</section>
-
-<section class="section">
-<div class="section-head">
-<p class="eyebrow">Услуги</p>
-<h2>Помощь с разными ипотечными задачами</h2>
-</div>
-<div class="grid cards-4">
-<article class="card"><h3>Подбор ипотеки</h3><p>Анализ ситуации, подбор подходящих программ и подготовка заявки.</p></article>
-<article class="card"><h3>Семейная ипотека</h3><p>Помощь разобраться в условиях программы и подготовить документы.</p></article>
-<article class="card"><h3>Ипотека на строительство</h3><p>Сопровождение клиентов, которые планируют строительство дома.</p></article>
-<article class="card"><h3>Сложные случаи</h3><p>Разбор отказов, нестандартных доходов и индивидуальных ситуаций.</p></article>
-</div>
-</section>
-
-<section class="section warm">
-<div class="notice">
-<div>
-<p class="eyebrow">Почему обращаются</p>
-<h2>Важно не просто подать заявку, а выбрать правильную стратегию</h2>
-<p>Перед обращением в банк важно оценить возможности клиента, подобрать подходящую программу и подготовить документы.</p>
-</div>
-<a class="btn btn-dark" href="{{ '/online-zayavka/' | relative_url }}">Начать консультацию</a>
-</div>
-</section>
+<div class="hero-content"><p class="eyebrow">Ипотечный брокер · Работаю по всей России</p><h1>Помогу подобрать ипотеку и подготовить заявку в банк</h1><p class="lead">{{ site.data.broker.name }}. {{ site.data.broker.experience }}. {{ site.data.broker.intro }}</p><div class="hero-actions"><a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}">Получить консультацию</a><a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a></div><ul class="trust-list"><li>Индивидуальный подбор программы</li><li>Помощь со сложными случаями</li><li>Дистанционное сопровождение</li></ul></div>
+<aside class="hero-card hero-card-photo">{% include portrait.html %}</aside></section>
+<section class="section"><div class="section-head"><p class="eyebrow">От первой покупки до сложной заявки</p><h2>Кому могу помочь</h2><p>Выберите свою ситуацию — на странице услуги рассказываю, с чего начать и что подготовить.</p></div><div class="broker-audience">{% for service in site.data.services %}<a class="card" href="{{ '/uslugi/' | append: service.slug | append: '/' | relative_url }}"><h3>{{ service.title }}</h3><p>{{ service.short }}</p><span class="text-link">Подробнее →</span></a>{% endfor %}</div></section>
+<section class="section muted"><div class="section-head"><p class="eyebrow">Личное сопровождение</p><h2>Почему обращаются ко мне</h2><p>Сначала разбираемся в вашей ситуации. Затем выбираем программу и готовим заявку с учётом требований банка.</p></div><ul class="broker-trust">{% for advantage in site.data.trust.advantages %}<li>{{ advantage }}</li>{% endfor %}</ul><p class="broker-notice">Я объясняю условия понятным языком и помогаю пройти согласованные этапы. Решение по кредиту, ставке и сумме принимает банк.</p><a class="text-link" href="{{ '/o-brokere/' | relative_url }}">Подробнее обо мне и подходе к работе →</a></section>
+{% include work-steps.html %}
+<section class="section"><div class="notice"><div><p class="eyebrow">Начните с расчёта</p><h2>Какой платёж будет комфортным?</h2><p>Рассчитайте ориентировочный платёж, проверьте разные сроки и суммы, затем обсудим подходящую программу.</p></div><a class="btn btn-dark" href="{{ '/kalkulyator-ipoteki/' | relative_url }}">Рассчитать ипотеку</a></div></section>
+{% if site.data.trust.reviews.size > 0 %}<section class="section"><div class="section-head"><h2>Отзывы клиентов</h2></div><div class="grid cards-3">{% for review in site.data.trust.reviews %}<figure class="card"><blockquote>{{ review.text | escape }}</blockquote><figcaption>{{ review.author | escape }}{% if review.url %} · <a href="{{ review.url | escape }}" rel="noopener">Источник</a>{% endif %}</figcaption></figure>{% endfor %}</div></section>{% endif %}
+<section class="section"><div class="section-head"><p class="eyebrow">Перед консультацией</p><h2>Ответы на частые вопросы</h2></div><div class="faq-list">{% for item in site.data.faq %}<details><summary>{{ item.question }}</summary><p>{{ item.answer }}</p></details>{% endfor %}</div></section>
+{% include faq-schema.html items=site.data.faq %}
+<section class="section muted"><div class="section-head"><h2>Полезные материалы</h2><p>Понятные объяснения, которые помогут подготовиться к покупке и задать нужные вопросы.</p></div><div class="broker-readings"><a class="card" href="{{ '/polezno/kak-podgotovitsya-k-ipoteke/' | relative_url }}"><h3>Как подготовиться к ипотеке</h3><p>Бюджет, документы и порядок действий.</p></a><a class="card" href="{{ '/polezno/chto-delat-posle-otkaza/' | relative_url }}"><h3>Почему банки отказывают</h3><p>Что проверить перед новой заявкой.</p></a><a class="card" href="{{ '/polezno/oshibki-pri-podgotovke-k-ipoteke/' | relative_url }}"><h3>Ошибки покупателей</h3><p>Какие решения лучше обдумать заранее.</p></a></div><p><a class="text-link" href="{{ '/polezno/' | relative_url }}">Все материалы →</a></p></section>
+<section class="section cta-section"><div><p class="eyebrow">Ваш следующий шаг</p><h2>Обсудим вашу ипотечную задачу?</h2><p>Расскажите, что планируете купить и какие вопросы возникли. Вместе определим, с чего начать.</p></div><div class="cta-actions"><a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}">Получить консультацию</a><a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>{% include social-links.html %}</div></section>

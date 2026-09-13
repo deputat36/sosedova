@@ -1,56 +1,58 @@
+{% capture resolved_title %}{% include resolve-meta.html value=page.title %}{% endcapture %}
+{% capture resolved_description %}{% include resolve-meta.html value=page.description %}{% endcapture %}
+{% assign resolved_title = resolved_title | strip %}{% assign resolved_description = resolved_description | strip %}
 <!doctype html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>{{ page.title | default: site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  <title>{{ resolved_title | default: site.data.seo.site_title | escape }}</title>
+  <meta name="description" content="{{ resolved_description | default: site.data.seo.site_description | escape }}">
   <meta name="robots" content="{{ page.robots | default: 'index, follow, max-image-preview:large' }}">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
   <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-  <meta name="application-name" content="Татьяна Стерликова">
+  <meta name="application-name" content="{{ site.data.broker.name }}">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Татьяна Стерликова">
+  <meta name="apple-mobile-web-app-title" content="{{ site.data.broker.name }}">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
-  <meta property="og:title" content="{{ page.title | default: site.title }}">
-  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:title" content="{{ resolved_title | default: site.data.seo.site_title | escape }}">
+  <meta property="og:description" content="{{ resolved_description | default: site.data.seo.site_description | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="ru_RU">
-  <meta property="og:image" content="{{ page.og_image | default: '/assets/img/tatyana-social.jpg' | absolute_url }}">
-  <meta property="og:image:secure_url" content="{{ page.og_image | default: '/assets/img/tatyana-social.jpg' | absolute_url }}">
-  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image" content="{{ page.og_image | default: site.data.seo.og_image | absolute_url }}">
+  <meta property="og:image:secure_url" content="{{ page.og_image | default: site.data.seo.og_image | absolute_url }}">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="{{ page.og_image_alt | default: 'Ипотечный брокер Татьяна Стерликова' }}">
+  <meta property="og:image:alt" content="{{ page.og_image_alt | default: site.data.broker.photo_alt }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
-  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
-  <meta name="twitter:image" content="{{ page.og_image | default: '/assets/img/tatyana-social.jpg' | absolute_url }}">
-  <meta name="twitter:image:alt" content="{{ page.og_image_alt | default: 'Ипотечный брокер Татьяна Стерликова' }}">
+  <meta name="twitter:title" content="{{ resolved_title | default: site.data.seo.site_title | escape }}">
+  <meta name="twitter:description" content="{{ resolved_description | default: site.data.seo.site_description | escape }}">
+  <meta name="twitter:image" content="{{ page.og_image | default: site.data.seo.og_image | absolute_url }}">
+  <meta name="twitter:image:alt" content="{{ page.og_image_alt | default: site.data.broker.photo_alt }}">
   <meta name="theme-color" content="#17283d">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/seo.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/accessibility.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/nav-state.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/footer-trust.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/broker.css' | relative_url }}">
   {% if page.url == '/online-zayavka/' %}
   <link rel="stylesheet" href="{{ '/assets/css/online-application.css' | relative_url }}">
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
-  {% if page.hero_photo %}<link rel="preload" as="image" href="{{ page.hero_photo | relative_url }}" type="image/webp" imagesrcset="{{ '/assets/img/tatyana-hero-mobile.webp' | relative_url }} 288w, {{ page.hero_photo | relative_url }} 360w" imagesizes="(max-width: 760px) 288px, 360px">{% endif %}
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"{{ '/o-brokere/' | absolute_url }}#tatyana","name":"Татьяна Стерликова","jobTitle":"Ипотечный брокер","telephone":"+79030250807","url":"{{ '/o-brokere/' | absolute_url }}","image":"{{ '/assets/img/tatyana-social.jpg' | absolute_url }}","sameAs":["https://vk.com/tatyanasterlikova"]},{"@type":"FinancialService","@id":"{{ '/' | absolute_url }}#service","name":"Ипотечный брокер Татьяна Стерликова","url":"{{ '/' | absolute_url }}","telephone":"+79030250807","founder":{"@id":"{{ '/o-brokere/' | absolute_url }}#tatyana"},"areaServed":[{"@type":"Country","name":"Россия"},{"@type":"City","name":"Борисоглебск"},{"@type":"AdministrativeArea","name":"Борисоглебский городской округ"},{"@type":"AdministrativeArea","name":"Грибановский район"},{"@type":"AdministrativeArea","name":"Поворинский район"}],"priceRange":"Бесплатная первичная консультация; сопровождение от 15000 RUB"}]}</script>
-  {% if page.schema %}
-    {% assign normalized_schema = page.schema | replace: 'https://deputat36.github.io/broker', site.url %}
-    <script type="application/ld+json">{{ normalized_schema }}</script>
-  {% endif %}
+  {% if site.data.broker.photo != '' and page.url == '/' %}<link rel="preload" as="image" href="{{ site.data.broker.photo | relative_url }}">{% endif %}
+  {% include broker-schema.html %}
+  {% if page.schema %}{% capture resolved_schema %}{% include resolve-meta.html value=page.schema json=true %}{% endcapture %}<script type="application/ld+json">{{ resolved_schema | strip }}</script>{% endif %}
+  {% if page.faq %}{% include faq-schema.html items=page.faq %}{% endif %}
   {% unless page.url == '/' or page.url == '/404.html' or page.hide_breadcrumbs %}
-    {% assign current_label_schema = page.breadcrumb | default: page.h1 | default: page.title %}
+    {% assign current_label_schema = page.breadcrumb | default: page.h1 | default: resolved_title %}
     {% assign parts_schema = page.url | split: '/' %}
     {% assign section_schema = parts_schema[1] %}
     {% assign parent_label_schema = '' %}
@@ -88,7 +90,7 @@
   {% endif %}
   <a class="skip-link" href="#main-content">Перейти к содержимому</a>
   <header class="site-header">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="На главную"><span class="brand-mark">ТС</span><span><strong>Татьяна Стерликова</strong><small>ипотечный брокер</small></span></a>
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="На главную"><span class="brand-mark">{{ site.data.broker.initials }}</span><span><strong>{{ site.data.broker.name }}</strong><small>ипотечный брокер</small></span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Открыть меню сайта">Меню</button>
     <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
       <a{% if page.url contains '/uslugi/' %} class="is-current" aria-current="page"{% endif %} href="{{ '/uslugi/' | relative_url }}">Услуги</a>
@@ -99,12 +101,12 @@
       <a{% if page.url contains '/faq/' %} class="is-current" aria-current="page"{% endif %} href="{{ '/faq/' | relative_url }}">Вопросы</a>
       <a{% if page.url contains '/o-brokere/' %} class="is-current" aria-current="page"{% endif %} href="{{ '/o-brokere/' | relative_url }}">О брокере</a>
       <a{% if page.url contains '/kontakty/' %} class="is-current" aria-current="page"{% endif %} href="{{ '/kontakty/' | relative_url }}">Контакты</a>
-      <a class="nav-phone" href="tel:+79030250807">8 903 025-08-07</a>
+      <a class="nav-phone" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
     </nav>
   </header>
   <main id="main-content" tabindex="-1">
     {% unless page.url == '/' or page.url == '/404.html' or page.hide_breadcrumbs %}
-      {% assign current_label = page.breadcrumb | default: page.h1 | default: page.title %}
+      {% assign current_label = page.breadcrumb | default: page.h1 | default: resolved_title %}
       {% assign parts = page.url | split: '/' %}
       {% assign section = parts[1] %}
       <nav class="breadcrumbs" aria-label="Навигационная цепочка">
@@ -131,7 +133,7 @@
           {% elsif section == 'o-brokere' %}
             <li aria-current="page">О брокере</li>
           {% elsif section == 'etagi' %}
-            <li aria-current="page">Клиентам «ЭТАЖИ»</li>
+            <li aria-current="page">Условия сопровождения</li>
           {% elsif section == 'policy' %}
             <li aria-current="page">Политика</li>
           {% else %}
@@ -151,6 +153,7 @@
     {% if show_complex_route %}
       {% include complex-application-route.html slug=route_slug %}
     {% endif %}
+    {% if route_section == 'uslugi' and page.url != '/uslugi/' %}{% include service-support.html %}{% endif %}
     {% assign show_online_route = false %}
     {% if route_section == 'uslugi' and page.url != '/uslugi/' %}{% assign show_online_route = true %}{% endif %}
     {% if route_section == 'geo' and page.url != '/geo/' %}
@@ -159,38 +162,39 @@
     {% if show_online_route %}
     <section class="section compact-section service-online-route">
       <div class="notice">
-        <div><p class="eyebrow">Дистанционное обращение</p><h2>Подайте онлайн-заявку из любого города</h2><p>Форма сохранит источник обращения, подставит подходящий сценарий и подготовит сообщение для отправки Татьяне.</p></div>
+        <div><p class="eyebrow">Дистанционное обращение</p><h2>Подайте онлайн-заявку из любого города</h2><p>Опишите задачу, оставьте контакты и выберите удобный способ связи.</p></div>
         <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}">Заполнить онлайн-заявку</a>
       </div>
     </section>
     {% endif %}
   </main>
-  <div class="sticky-contacts" aria-label="Быстрая связь с ипотечным брокером"><a class="sticky-action sticky-apply" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}">Заявка</a><a class="sticky-action sticky-call" href="tel:+79030250807">Позвонить</a><button class="sticky-action" type="button" data-copy-phone>MAX</button><a class="sticky-action" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a></div>
+  <div class="sticky-contacts" aria-label="Быстрая связь с ипотечным брокером"><a class="sticky-action sticky-apply" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}">Заявка</a><a class="sticky-action sticky-call" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>{% include social-links.html %}</div>
   <footer class="site-footer{% if page.url == '/online-zayavka/' %} site-footer-compact{% endif %}">
     <div class="footer-brand">
       <a class="footer-person" href="{{ '/o-brokere/' | relative_url }}">
-        <img class="footer-avatar" src="{{ '/assets/img/tatyana-avatar.webp' | relative_url }}" alt="" width="76" height="76" loading="lazy" decoding="async">
-        <span class="footer-person-copy"><span class="footer-person-name">Татьяна Стерликова</span><span class="footer-person-role">ипотечный брокер</span></span>
+        <span class="brand-mark footer-avatar" aria-hidden="true">{{ site.data.broker.initials }}</span>
+        <span class="footer-person-copy"><span class="footer-person-name">{{ site.data.broker.name }}</span><span class="footer-person-role">ипотечный брокер</span></span>
       </a>
-      <p>Онлайн-консультации из любого города. Локальные материалы: Борисоглебск, Грибановский район и Поворино.</p>
+      <p>{{ site.data.broker.coverage }}. {{ site.data.contacts.city }}, {{ site.data.contacts.region }}.</p>
       <a class="footer-about-link" href="{{ '/o-brokere/' | relative_url }}">Подробнее о подходе к работе →</a><br>
-      <a class="footer-phone" href="tel:+79030250807">8 903 025-08-07</a>
+      <a class="footer-phone" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
     </div>
     <nav class="footer-grid{% if page.url == '/online-zayavka/' %} footer-grid-compact{% endif %}" aria-label="Навигация в подвале сайта">
       {% if page.url == '/online-zayavka/' %}
       <div class="footer-col"><strong>Перед отправкой</strong><a href="{{ '/policy/' | relative_url }}">Политика обработки данных</a><a href="{{ '/o-brokere/' | relative_url }}">О брокере</a><a href="{{ '/kontakty/' | relative_url }}">Контакты</a></div>
-      <div class="footer-col"><strong>Помощь и связь</strong><a href="{{ '/faq/' | relative_url }}">Частые вопросы</a><a href="tel:+79030250807">Позвонить Татьяне</a><a href="https://vk.com/tatyanasterlikova" rel="noopener">Написать ВКонтакте</a></div>
+      <div class="footer-col"><strong>Помощь и связь</strong><a href="{{ '/faq/' | relative_url }}">Частые вопросы</a><a href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>{% include social-links.html %}</div>
       {% else %}
       <div class="footer-col"><strong>Услуги</strong><a href="{{ '/uslugi/' | relative_url }}">Все услуги</a><a href="{{ '/uslugi/podbor-ipoteki/' | relative_url }}">Подбор ипотеки</a><a href="{{ '/uslugi/refinansirovanie-ipoteki/' | relative_url }}">Рефинансирование</a><a href="{{ '/uslugi/ipoteka-na-novostroyku/' | relative_url }}">Новостройка</a><a href="{{ '/uslugi/ipoteka-na-vtorichnoe-zhile/' | relative_url }}">Вторичное жилье</a><a href="{{ '/uslugi/ipoteka-pri-prodazhe-starogo-zhilya/' | relative_url }}">Продажа старого жилья</a><a href="{{ '/uslugi/ipoteka-na-stroitelstvo-doma/' | relative_url }}">Строительство дома</a><a href="{{ '/uslugi/semeynaya-ipoteka/' | relative_url }}">Семейная ипотека</a><a href="{{ '/uslugi/ipoteka-dlya-molodoy-semi/' | relative_url }}">Молодая семья</a><a href="{{ '/uslugi/ipoteka-dlya-pensionerov/' | relative_url }}">Пенсионеры</a><a href="{{ '/uslugi/materinskiy-kapital/' | relative_url }}">Материнский капитал</a><a href="{{ '/uslugi/otkazali-v-ipoteke/' | relative_url }}">Отказали в ипотеке</a></div>
       <div class="footer-col"><strong>Сложные случаи</strong><a href="{{ '/uslugi/slozhnaya-ipoteka/' | relative_url }}">Сложная ипотека</a><a href="{{ '/uslugi/ipoteka-s-sozaemshchikom/' | relative_url }}">Созаемщик</a><a href="{{ '/uslugi/ipoteka-bez-oficialnogo-dohoda/' | relative_url }}">Без официального дохода</a><a href="{{ '/uslugi/ipoteka-bez-pervonachalnogo-vznosa/' | relative_url }}">Без первоначального взноса</a><a href="{{ '/uslugi/ipoteka-dlya-ip-samozanyatyh/' | relative_url }}">ИП и самозанятые</a><a href="{{ '/uslugi/ipoteka-s-plohoy-kreditnoy-istoriey/' | relative_url }}">Кредитная история</a><a href="{{ '/uslugi/ipoteka-na-dom/' | relative_url }}">Ипотека на дом</a></div>
-      <div class="footer-col"><strong>География</strong><a href="{{ '/online-zayavka/' | relative_url }}">Онлайн из любого города</a><a href="{{ '/geo/' | relative_url }}">Все районы</a><a href="{{ '/geo/borisoglebsk/' | relative_url }}">Борисоглебск</a><a href="{{ '/geo/borisoglebsk/ipoteka-na-kvartiru/' | relative_url }}">Квартира в Борисоглебске</a><a href="{{ '/geo/gribanovskiy/' | relative_url }}">Грибановский район</a><a href="{{ '/geo/povorino/' | relative_url }}">Поворино и район</a><a href="{{ '/etagi/' | relative_url }}">Клиентам «ЭТАЖИ»</a></div>
+      <div class="footer-col"><strong>По всей России</strong><a href="{{ '/geo/' | relative_url }}">Дистанционная работа</a><a href="{{ '/kak-prohodit-rabota/' | relative_url }}">Этапы сопровождения</a><a href="{{ '/uslugi/strahovanie/' | relative_url }}">Страхование</a></div>
       <div class="footer-col"><strong>Информация</strong><a href="{{ '/online-zayavka/' | relative_url }}">Онлайн-заявка</a><a href="{{ '/o-brokere/' | relative_url }}">О брокере</a><a href="{{ '/kalkulyator-ipoteki/' | relative_url }}">Калькулятор</a><a href="{{ '/konsultaciya/' | relative_url }}">Консультация</a><a href="{{ '/stoimost/' | relative_url }}">Стоимость</a><a href="{{ '/polezno/' | relative_url }}">Полезно</a><a href="{{ '/faq/' | relative_url }}">FAQ</a><a href="{{ '/kontakty/' | relative_url }}">Контакты</a><a href="{{ '/policy/' | relative_url }}">Политика</a><a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a></div>
       {% endif %}
     </nav>
     <p class="disclaimer">Информация на сайте не является публичной офертой. Окончательное решение по ипотеке, ставке и условиям принимает банк.</p>
   </footer>
+  <script>window.brokerConfig = {phone: {{ site.data.contacts.phone_e164 | jsonify }}, brand: {{ site.data.broker.brand | jsonify }}};</script>
   <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
-  {% if page.url == '/' or page.url == '/kalkulyator-ipoteki/' %}
+  {% if page.url == '/kalkulyator-ipoteki/' %}
   <script src="{{ '/assets/js/mortgage-calculator.js' | relative_url }}" defer></script>
   {% endif %}
   {% if page.url == '/online-zayavka/' %}

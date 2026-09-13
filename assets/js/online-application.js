@@ -13,7 +13,7 @@
   const vkLink = document.querySelector('[data-application-vk]');
   const directSendButton = document.querySelector('[data-application-direct-send]');
   const deliveryNote = document.querySelector('[data-application-delivery-note]');
-  const LAST_LEAD_STORAGE_KEY = 'sterlikovaMortgageLastLead';
+  const LAST_LEAD_STORAGE_KEY = 'brokerMortgageLastLead';
   const LAST_LEAD_RETENTION_MS = 24 * 60 * 60 * 1000;
 
   let preparedText = '';
@@ -52,11 +52,7 @@
     'ipoteka-na-stroitelstvo-doma': 'Строительство дома'
   };
 
-  const CITY_BY_PREFIX = {
-    '/geo/borisoglebsk/': 'Борисоглебск',
-    '/geo/gribanovskiy/': 'Грибановский район',
-    '/geo/povorino/': 'Поворино'
-  };
+  const CITY_BY_PREFIX = {};
 
   function track(goalName) {
     if (typeof window.sendGoal === 'function') window.sendGoal(goalName);
@@ -279,7 +275,7 @@
   function buildApplicationText(payload) {
     const qualification = payload.qualification || {};
     return [
-      'ОНЛАЙН-ЗАЯВКА С САЙТА sterlikova-ipoteka.ru',
+      `ОБРАЩЕНИЕ: ${(window.brokerConfig || {}).brand || window.location.hostname}`,
       `Номер заявки: ${payload.request_id}`,
       `Источник обращения: ${payload.source_page}`,
       '',
@@ -364,7 +360,7 @@
     const emailPayload = {
       access_key: leadConfig.web3formsAccessKey,
       subject: `Новая заявка ипотечному брокеру — ${payload.mortgage.scenario}`,
-      from_name: 'Сайт ипотечного брокера Татьяны Стерликовой',
+      from_name: (window.brokerConfig || {}).brand || 'Сайт ипотечного брокера',
       name: payload.client.name,
       phone: payload.client.phone,
       city: payload.client.city,
@@ -536,9 +532,9 @@
     preparedPayload = buildLeadPayload();
     preparedText = buildApplicationText(preparedPayload);
     if (output) output.value = preparedText;
-    if (smsLink) smsLink.href = `sms:+79030250807?body=${encodeURIComponent(preparedText)}`;
+    if (smsLink) smsLink.href = `sms:${(window.brokerConfig || {}).phone || ""}?body=${encodeURIComponent(preparedText)}`;
     if (result) result.hidden = false;
-    setStatus('Заявка подготовлена. Проверьте текст и отправьте её онлайн.', 'success');
+    setStatus(directDeliveryEnabled ? 'Заявка подготовлена. Проверьте текст и отправьте её онлайн.' : 'Обращение подготовлено, но ещё не отправлено. Отправьте его через SMS или выбранный канал ниже.', 'success');
     setDeliveryNote(
       directDeliveryEnabled
         ? 'Проверьте текст. Основной канал — отправка на email; резервные способы доступны ниже.'
@@ -570,7 +566,7 @@
     if (!preparedText || !navigator.share) return;
     try {
       await navigator.share({ title: 'Онлайн-заявка ипотечному брокеру', text: preparedText });
-      setStatus('Заявка передана в выбранное приложение.', 'success');
+      setStatus('Открыт выбранный способ отправки. Завершите отправку в приложении.', 'success');
       track('online_application_share');
     } catch (error) {
       if (error && error.name === 'AbortError') return;

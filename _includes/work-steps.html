@@ -1,0 +1,1 @@
+<section class="section muted"><div class="section-head"><p class="eyebrow">Понятный порядок действий</p><h2>Как проходит работа</h2></div><ol class="broker-steps">{% for step in site.data.trust.steps %}<li><span class="step-number" aria-hidden="true">0{{ forloop.index }}</span><h3>{{ step.title }}</h3><p>{{ step.text }}</p></li>{% endfor %}</ol></section>
