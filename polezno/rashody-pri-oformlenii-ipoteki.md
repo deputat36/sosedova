@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Расходы при оформлении ипотеки | Татьяна Стерликова"
+title: "Расходы при оформлении ипотеки | __BROKER_NAME__"
 description: "Какие расходы могут быть при оформлении ипотеки: первоначальный взнос, оценка недвижимости, страхование, госпошлины, услуги специалистов, аванс, переезд и финансовый резерв."
 permalink: "/polezno/rashody-pri-oformlenii-ipoteki/"
 breadcrumb: "Расходы при ипотеке"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Расходы при оформлении ипотеки","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/rashody-pri-oformlenii-ipoteki/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Расходы при оформлении ипотеки","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/rashody-pri-oformlenii-ipoteki/"}'
 ---
 
 <section class="page-hero section">
@@ -15,7 +15,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Расх
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/kalkulyator-ipoteki/' | relative_url }}">Посчитать платеж</a>
     <a class="btn btn-secondary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=mortgage_costs_hero">Передать бюджет онлайн</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -84,7 +84,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Расх
   </div>
 </section>
 
-<section class="section compact-section"><div class="notice"><div><p class="eyebrow">Клиентам «ЭТАЖИ»</p><h2>Условия подтверждаются до начала работы</h2><p>Если покупка проводится через компанию «ЭТАЖИ», состав ипотечного сопровождения и порядок оплаты зависят от действующих условий компании и параметров конкретной сделки. До начала работы уточните, какие действия входят в услугу и предусмотрена ли отдельная оплата.</p></div><a class="btn btn-dark" href="{{ '/etagi/' | relative_url }}">Уточнить условия</a></div></section>
+
 
 <section class="section cta-section">
   <div>
@@ -94,8 +94,8 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Расх
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=mortgage_costs_footer">Разобрать бюджет</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

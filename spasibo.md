@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Статус онлайн-заявки | Ипотечный брокер Татьяна Стерликова"
+title: "Статус онлайн-заявки | Ипотечный брокер __BROKER_NAME__"
 description: "Проверка статуса онлайн-заявки ипотечному брокеру. Подтверждение отправки показывается только при наличии корректного номера обращения."
 permalink: "/spasibo/"
 breadcrumb: "Статус заявки"
@@ -14,7 +14,7 @@ sitemap: false
   <h1 id="thankyou-title">Проверяем подтверждение обращения</h1>
   <p class="lead" id="thankyou-message">Подтверждение появится, если сервис действительно принял заявку и передал номер обращения. При прямом переходе на эту страницу статус отправки не считается подтверждённым.</p>
   <div class="hero-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">Позвонить брокеру</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить брокеру</a>
     <a class="btn btn-light" href="{{ '/online-zayavka/' | relative_url }}">Вернуться к онлайн-заявке</a>
     <a class="btn btn-light" href="{{ '/uslugi/' | relative_url }}">Посмотреть услуги</a>
   </div>
@@ -24,14 +24,14 @@ sitemap: false
   <div class="grid cards-3" aria-label="Статус обращения">
     <article class="card"><p class="eyebrow">Номер обращения</p><h2 id="lead-id">—</h2><p id="lead-id-note">Номер появится после подтверждённой отправки.</p></article>
     <article class="card"><p class="eyebrow">Передача</p><h2 id="delivery-status">Не подтверждена</h2><p id="delivery-note">Прямой переход на страницу не подтверждает передачу данных.</p></article>
-    <article class="card"><p class="eyebrow">Следующий шаг</p><h2 id="next-step-title">Проверьте отправку</h2><p id="next-step-note">Вернитесь к форме или свяжитесь с Татьяной напрямую.</p></article>
+    <article class="card"><p class="eyebrow">Следующий шаг</p><h2 id="next-step-title">Проверьте отправку</h2><p id="next-step-note">Вернитесь к форме или свяжитесь с {{ site.data.broker.instrumental }} напрямую.</p></article>
   </div>
 </section>
 
 <section class="section muted">
   <div class="section-head"><p class="eyebrow">После подтверждённой отправки</p><h2>Что произойдёт дальше</h2><p>Техническое подтверждение отправки не является одобрением ипотеки и не создаёт обязательств по платному сопровождению.</p></div>
   <div class="grid cards-3">
-    <article class="card"><h3>1. Проверка вводных</h3><p>Татьяна посмотрит цель, объект, первоначальный взнос, доход и историю обращений в банки.</p></article>
+    <article class="card"><h3>1. Проверка вводных</h3><p>{{ site.data.broker.first_name }} посмотрит цель, объект, первоначальный взнос, доход и историю обращений в банки.</p></article>
     <article class="card"><h3>2. Уточняющий контакт</h3><p>При необходимости задаст дополнительные вопросы и предложит удобный формат разговора.</p></article>
     <article class="card"><h3>3. Согласование маршрута</h3><p>Вы получите следующий шаг. Возможность и условия дальнейшего сопровождения обсуждаются отдельно.</p></article>
   </div>
@@ -47,7 +47,7 @@ sitemap: false
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var legacyContext = window.thankYouContext || {};
-    var storageKey = 'sterlikovaMortgageLastLead';
+    var storageKey = 'brokerMortgageLastLead';
     var lastLead = {};
 
     function cleanRequestId(value) {
@@ -63,7 +63,7 @@ sitemap: false
     }
 
     function trackVerifiedView(requestId) {
-      var trackingKey = 'sterlikovaThankYouTracked:' + requestId;
+      var trackingKey = 'brokerThankYouTracked:' + requestId;
       try {
         if (window.sessionStorage.getItem(trackingKey) === '1') return;
         window.sessionStorage.setItem(trackingKey, '1');
@@ -95,13 +95,13 @@ sitemap: false
       if (page) page.dataset.state = currentRedirectVerified ? 'verified' : 'restored';
       setText('lead-id', requestId);
       setText('next-step-title', 'Обратная связь');
-      setText('next-step-note', 'Татьяна изучит вводные и свяжется с вами удобным способом.');
+      setText('next-step-note', '{{ site.data.broker.first_name }} изучит вводные и свяжется с вами удобным способом.');
 
       if (currentRedirectVerified) {
         setText('thankyou-eyebrow', 'Заявка отправлена');
         setText('thankyou-title', 'Спасибо, обращение передано');
-        setText('thankyou-message', 'Сервис подтвердил передачу обращения через настроенный канал. Сохраните номер заявки до ответа Татьяны.');
-        setText('lead-id-note', 'Сохраните этот номер до ответа Татьяны.');
+        setText('thankyou-message', 'Сервис подтвердил передачу обращения через настроенный канал. Сохраните номер заявки до ответа {{ site.data.broker.genitive }}.');
+        setText('lead-id-note', 'Сохраните этот номер до ответа {{ site.data.broker.genitive }}.');
         setText('delivery-status', 'Подтверждена');
         setText('delivery-note', 'Хотя бы один настроенный канал принял обращение.');
         trackVerifiedView(contextRequestId);

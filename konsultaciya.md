@@ -1,22 +1,22 @@
 ---
 layout: "default"
-title: "Онлайн-консультация ипотечного брокера | Татьяна Стерликова"
+title: "Онлайн-консультация ипотечного брокера | __BROKER_NAME__"
 description: "Бесплатная первичная онлайн-консультация ипотечного брокера из любого города: платеж, взнос, документы, риски отказа и следующий шаг."
 permalink: "/konsultaciya/"
 breadcrumb: "Консультация"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Сколько стоит первичная консультация ипотечного брокера?","acceptedAnswer":{"@type":"Answer","text":"Первичная консультация у Татьяны Стерликовой бесплатная."}},{"@type":"Question","name":"Можно ли обратиться из другого города?","acceptedAnswer":{"@type":"Answer","text":"Да. Первичный разбор можно провести дистанционно из любого города. Возможность дальнейшего сопровождения зависит от банка, региона, объекта и задачи."}},{"@type":"Question","name":"Как получить консультацию?","acceptedAnswer":{"@type":"Answer","text":"Можно заполнить онлайн-заявку, позвонить по номеру 8 903 025-08-07, написать в MAX по этому номеру или обратиться на страницу ВКонтакте."}}]}'
+schema: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Сколько стоит первичная консультация ипотечного брокера?","acceptedAnswer":{"@type":"Answer","text":"Стоимость и состав помощи согласуются до начала работы."}},{"@type":"Question","name":"Можно ли обратиться из другого города?","acceptedAnswer":{"@type":"Answer","text":"Да. Первичный разбор можно провести дистанционно из любого города. Возможность дальнейшего сопровождения зависит от банка, региона, объекта и задачи."}},{"@type":"Question","name":"Как получить консультацию?","acceptedAnswer":{"@type":"Answer","text":"Можно заполнить онлайн-заявку, позвонить по номеру 8 903 025-08-07, написать в MAX по этому номеру или обратиться на страницу ВКонтакте."}}]}'
 ---
 
 <section class="page-hero section">
-  <p class="eyebrow">Первичный разбор бесплатно · онлайн из любого города</p>
+  <p class="eyebrow">Первичный разбор по договорённости · онлайн из любого города</p>
   <h1>Онлайн-консультация ипотечного брокера</h1>
   <p class="lead">Помогу понять, с чего начать ипотеку, какой платеж ориентировочно подходит, какие риски могут помешать одобрению и нужен ли вам полный подбор банка.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}">Заполнить онлайн-заявку</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>Написать в MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВКонтакте</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>
+    
+    {% include social-links.html %}
   </div>
 </section>
 
@@ -30,7 +30,7 @@ schema: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@typ
     </div>
     <div class="cta-actions">
       <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}">Перейти к анкете</a>
-      <a class="btn btn-dark" href="tel:+79030250807">Позвонить</a>
+      <a class="btn btn-dark" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>
     </div>
   </div>
 </section>
@@ -52,8 +52,8 @@ schema: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@typ
 <section class="section">
   <div class="section-head">
     <p class="eyebrow">География</p>
-    <h2>Первичный разбор не ограничен тремя районами</h2>
-    <p>Отдельные страницы Борисоглебска, Грибановского и Поворино созданы для локальных поисковых запросов. Обратиться дистанционно можно из любого города. Дальнейший формат зависит от региона, банка, объекта и объёма необходимой работы.</p>
+    <h2>Первичный разбор доступен из любого региона</h2>
+    <p>Обратиться дистанционно можно из любого города. Дальнейший формат зависит от региона, банка, объекта и объёма необходимой работы.</p>
   </div>
   <div class="grid cards-4">
     <article class="card"><h3>Ваш город</h3><p>Укажите место проживания и где находится объект. Эти адреса могут не совпадать.</p></article>
@@ -71,23 +71,14 @@ schema: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@typ
   </div>
   <div class="notice">
     <div>
-      <p><strong>Здравствуйте, Татьяна. Хочу проконсультироваться по ипотеке.</strong></p>
+      <p><strong>Здравствуйте, {{ site.data.broker.first_name }}. Хочу проконсультироваться по ипотеке.</strong></p>
       <p>Город: ___. Объект: квартира / дом / новостройка / строительство. Стоимость примерно: ___ ₽. Первоначальный взнос: ___ ₽. Доход: официально / ИП / самозанятость / другой вариант. Были ли заявки или отказы: да / нет.</p>
     </div>
     <a class="btn btn-dark" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}">Заполнить готовую форму</a>
   </div>
 </section>
 
-<section class="section compact-section">
-  <div class="notice">
-    <div>
-      <p class="eyebrow">Клиентам компании «ЭТАЖИ»</p>
-      <h2>Условия ипотечного сопровождения подтверждаются отдельно</h2>
-      <p>Бесплатная первичная консультация не означает, что любое дальнейшее сопровождение предоставляется без отдельной оплаты. Для сделки через компанию «ЭТАЖИ» состав услуги и порядок оплаты зависят от действующих условий компании и параметров конкретной сделки.</p>
-    </div>
-    <a class="btn btn-dark" href="{{ '/etagi/' | relative_url }}">Уточнить условия «ЭТАЖИ»</a>
-  </div>
-</section>
+
 
 <section class="section cta-section">
   <div>
@@ -97,8 +88,8 @@ schema: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@typ
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВКонтакте</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

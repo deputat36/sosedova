@@ -1,39 +1,30 @@
-title: Ипотечный брокер Татьяна Стерликова
-description: Онлайн-консультации и сопровождение по ипотеке из любого города. Локальные материалы для Борисоглебска, Грибановского района и Поворино.
-url: "https://sterlikova-ipoteka.ru"
-baseurl: ""
+title: Соседова Ипотека
+description: Помощь в подборе ипотеки, семейной ипотеки, строительстве дома и сложных
+  случаях. Работа с клиентами из любого региона России.
+url: https://sosedova-ipoteka.ru
+baseurl: ''
 lang: ru
 permalink: pretty
 markdown: kramdown
-
-# Технические файлы используются CI и операционными процедурами, но не должны
-# публиковаться как страницы клиентского сайта.
 exclude:
-  - .github
-  - docs
-  - scripts
-  - supabase
-  - README.md
-
-# Прием заявок
-# Рабочий канал реализован по схеме проекта «Новостройки Борисоглебска»:
-# Web3Forms отправляет email-копию, а пользователь после успеха переходит на /spasibo/.
-# Дополнительный Supabase/CRM endpoint остаётся пустым до завершения issue #7.
-# Web3Forms access key является публичным идентификатором формы, а не серверным секретом.
-# После smoke-теста issue #8 при необходимости замените только web3forms_access_key.
-# Не размещайте здесь токены Telegram, service role key или другие закрытые ключи:
-# содержимое _config.yml публикуется в открытом репозитории и попадает в HTML сайта.
+- .github
+- docs
+- scripts
+- supabase
+- README.md
+- Gemfile
+- Gemfile.lock
+- vendor
+- node_modules
+- tests
+- source-audits.log
+- post-build-audits.log
 lead_capture:
-  mode: "web3forms"
-  web3forms_access_key: "c6b147c0-0ce0-43cb-a41d-2d112b6f1364"
-  web3forms_endpoint: "https://api.web3forms.com/submit"
-  endpoint: ""
-  thank_you_path: "/spasibo/"
+  mode: disabled
+  web3forms_access_key: ''
+  web3forms_endpoint: https://api.web3forms.com/submit
+  endpoint: ''
+  thank_you_path: /spasibo/
   timeout_ms: 8000
   min_fill_ms: 3000
-
-# Аналитика
-# Пока счетчик не указан, код Яндекс Метрики в шаблон не выводится.
-# После создания счетчика нужно заменить пустое значение на ID, например: yandex_metrika_id: "12345678"
-# Webvisor в шаблоне выключен по умолчанию.
-yandex_metrika_id: ""
+yandex_metrika_id: ''

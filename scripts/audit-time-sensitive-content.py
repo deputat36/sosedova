@@ -114,6 +114,7 @@ def client_markdown_files() -> list[Path]:
 
 def source_text(path: Path) -> str:
     text = path.read_text(encoding="utf-8", errors="ignore")
+    text = re.sub(r"\{%.*?%\}|\{\{.*?\}\}", " ", text, flags=re.S)
     text = FENCE_RE.sub(" ", text)
     text = SCRIPT_STYLE_RE.sub(" ", text)
     text = COMMENT_RE.sub(" ", text)

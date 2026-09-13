@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Как рассчитать ипотеку по доходу | Татьяна Стерликова"
+title: "Как рассчитать ипотеку по доходу | __BROKER_NAME__"
 description: "Как предварительно рассчитать ипотеку по доходу: платеж, кредитная нагрузка, первоначальный взнос, срок, действующие кредиты и запас после сделки."
 permalink: "/polezno/kak-rasschitat-ipoteku-po-dohodu/"
 breadcrumb: "Расчет ипотеки по доходу"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как рассчитать ипотеку по доходу","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/kak-rasschitat-ipoteku-po-dohodu/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как рассчитать ипотеку по доходу","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/kak-rasschitat-ipoteku-po-dohodu/"}'
 ---
 
 <section class="page-hero section">
@@ -80,7 +80,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
   </div>
 </section>
 
-<section class="section compact-section"><div class="notice"><div><p class="eyebrow">Клиентам «ЭТАЖИ»</p><h2>Условия сопровождения уточняются до начала работы</h2><p>Если сделка проходит через компанию «ЭТАЖИ», состав ипотечного сопровождения и порядок оплаты зависят от действующих условий компании и параметров конкретной сделки. До начала работы Татьяна пояснит, что входит в услугу и предусмотрена ли отдельная оплата.</p></div><a class="btn btn-dark" href="{{ '/etagi/' | relative_url }}">Подробнее</a></div></section>
+
 
 <section class="section cta-section">
   <div>
@@ -90,7 +90,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=income_calc_final">Разобрать расчет</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить</a>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>
+    {% include social-links.html %}
   </div>
 </section>

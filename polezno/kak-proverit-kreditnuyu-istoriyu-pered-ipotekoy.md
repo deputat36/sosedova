@@ -1,18 +1,18 @@
 ---
 layout: "default"
-title: "Как проверить кредитную историю перед ипотекой | Татьяна Стерликова"
+title: "Как проверить кредитную историю перед ипотекой | __BROKER_NAME__"
 description: "Что проверить в кредитной истории перед ипотекой: просрочки, действующие кредиты, кредитные карты, ошибки, частые заявки и причины возможного отказа банка."
 permalink: "/polezno/kak-proverit-kreditnuyu-istoriyu-pered-ipotekoy/"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как проверить кредитную историю перед ипотекой","author":{"@type":"Person","name":"Татьяна Стерликова"},"about":"Проверка кредитной истории перед ипотекой"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как проверить кредитную историю перед ипотекой","author":{"@type":"Person","name":"__BROKER_NAME__"},"about":"Проверка кредитной истории перед ипотекой"}'
 ---
 
 <section class="page-hero section">
-  <div class="breadcrumbs"><a href="{{ '/' | relative_url }}">Главная</a> / <a href="{{ '/polezno/' | relative_url }}">Полезно</a> / Кредитная история</div>
+  
   <p class="eyebrow">До подачи заявки</p>
   <h1>Как проверить кредитную историю перед ипотекой</h1>
   <p class="lead">Кредитная история — не только список просрочек. Банк оценивает действующие обязательства, лимиты по картам, частоту заявок и то, насколько аккуратно заемщик выполнял договоры.</p>
-  <div class="hero-actions"><a class="btn btn-primary" href="{{ '/konsultaciya/' | relative_url }}">Разобрать ситуацию</a><a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a></div>
+  <div class="hero-actions"><a class="btn btn-primary" href="{{ '/konsultaciya/' | relative_url }}">Разобрать ситуацию</a><a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a></div>
 </section>
 
 <section class="section">
@@ -64,10 +64,10 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
 </section>
 
 <section class="section compact-section">
-  <div class="notice"><div><p class="eyebrow">Сложная ситуация</p><h2>Историю нужно оценивать вместе с остальными данными</h2><p>Татьяна поможет собрать картину по доходу, нагрузке, взносу и предыдущим заявкам, а затем определить реалистичный следующий шаг.</p></div><div class="hero-actions"><a class="btn btn-dark" href="{{ '/uslugi/ipoteka-s-plohoy-kreditnoy-istoriey/' | relative_url }}">Ипотека и кредитная история</a><a class="btn btn-light" href="{{ '/online-zayavka/' | relative_url }}?source=%2Fpolezno%2Fkak-proverit-kreditnuyu-istoriyu-pered-ipotekoy%2F">Заполнить онлайн-заявку</a></div></div>
+  <div class="notice"><div><p class="eyebrow">Сложная ситуация</p><h2>Историю нужно оценивать вместе с остальными данными</h2><p>{{ site.data.broker.first_name }} поможет собрать картину по доходу, нагрузке, взносу и предыдущим заявкам, а затем определить реалистичный следующий шаг.</p></div><div class="hero-actions"><a class="btn btn-dark" href="{{ '/uslugi/ipoteka-s-plohoy-kreditnoy-istoriey/' | relative_url }}">Ипотека и кредитная история</a><a class="btn btn-light" href="{{ '/online-zayavka/' | relative_url }}?source=%2Fpolezno%2Fkak-proverit-kreditnuyu-istoriyu-pered-ipotekoy%2F">Заполнить онлайн-заявку</a></div></div>
 </section>
 
 <section class="section cta-section">
-  <div><p class="eyebrow">Перед новой заявкой</p><h2>Получите первичный разбор бесплатно</h2><p>Расскажите, были ли просрочки и отказы, какие кредиты действуют сейчас, какой доход и первоначальный взнос.</p></div>
-  <div class="cta-actions"><a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a><button class="btn btn-secondary" type="button" data-copy-phone>MAX</button><a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВКонтакте</a></div>
+  <div><p class="eyebrow">Перед новой заявкой</p><h2>Получите первичный разбор</h2><p>Расскажите, были ли просрочки и отказы, какие кредиты действуют сейчас, какой доход и первоначальный взнос.</p></div>
+  <div class="cta-actions"><a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>{% include social-links.html %}</div>
 </section>

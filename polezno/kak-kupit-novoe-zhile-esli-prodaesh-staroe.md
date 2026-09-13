@@ -5,7 +5,7 @@ description: "Как подготовиться к покупке нового �
 permalink: "/polezno/kak-kupit-novoe-zhile-esli-prodaesh-staroe/"
 breadcrumb: "Покупка при продаже старого жилья"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как купить новое жилье, если продаешь старое","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/kak-kupit-novoe-zhile-esli-prodaesh-staroe/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как купить новое жилье, если продаешь старое","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/kak-kupit-novoe-zhile-esli-prodaesh-staroe/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
   <p class="lead">Самая частая сложность в такой сделке — связать сроки продажи, ипотечного одобрения, первоначального взноса, аванса за новое жилье и требований банка к объекту.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Продажа старого и покупка нового жилья' | url_encode }}&amp;placement=sale_purchase_hero">Разобрать цепочку онлайн</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -103,7 +103,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Продажа старого и покупка нового жилья' | url_encode }}&amp;placement=sale_purchase_final">Разобрать сделку</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить</a>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>
+    {% include social-links.html %}
   </div>
 </section>

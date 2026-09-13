@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Материнский капитал в ипотеке: порядок действий | Борисоглебск"
+title: "Материнский капитал в ипотеке: порядок действий | Ипотека по России"
 description: "Как подготовить ипотеку с материнским капиталом: сценарий использования, первоначальный взнос, документы, объект, доли детям и порядок сделки."
 permalink: "/polezno/matkapital-v-ipoteke/"
 og_type: "article"
@@ -12,7 +12,7 @@ og_type: "article"
   <p class="lead">Маткапитал может стать частью ипотечного маршрута, но его нельзя рассматривать отдельно от банка, объекта, продавца, документов семьи и будущего оформления долей.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source=%2Fpolezno%2Fmatkapital-v-ipoteke%2F&amp;scenario=Материнский%20капитал">Разобрать свой сценарий</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -73,7 +73,7 @@ og_type: "article"
 
   <aside class="sidebar">
     <div class="seo-panel">
-      <h3>Что сообщить Татьяне</h3>
+      <h3>Что сообщить {{ site.data.broker.dative }}</h3>
       <p>Город, объект, семейная ситуация, сертификат, собственные средства, доход и действующие кредиты.</p>
       <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source=%2Fpolezno%2Fmatkapital-v-ipoteke%2F&amp;scenario=Материнский%20капитал">Онлайн-заявка</a>
     </div>
@@ -109,7 +109,7 @@ og_type: "article"
     <p>Маткапитал должен работать вместе с ипотекой, объектом, документами семьи и понятным порядком расчётов.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">Написать ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    {% include social-links.html %}
   </div>
 </section>

@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Ипотека с алиментами | Татьяна Стерликова"
+title: "Ипотека с алиментами | __BROKER_NAME__"
 description: "Как алименты могут влиять на ипотеку: что проверить, если заемщик платит или получает алименты, как учитывать семейный бюджет, кредиты, созаемщика и платеж."
 permalink: "/polezno/ipoteka-s-alimentami/"
 breadcrumb: "Ипотека с алиментами"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека с алиментами","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/ipoteka-s-alimentami/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека с алиментами","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/ipoteka-s-alimentami/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <p class="lead">Если в семейном бюджете есть алименты, важно заранее отделить регулярные обязательства от подтверждаемых поступлений и посмотреть всю финансовую картину. Как конкретный банк учитывает эти суммы, зависит от его правил и документов.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Другая ситуация' | url_encode }}&amp;placement=alimony_hero">Разобрать ситуацию онлайн</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -94,7 +94,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Другая ситуация' | url_encode }}&amp;placement=alimony_final">Разобрать ситуацию</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить</a>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>
+    {% include social-links.html %}
   </div>
 </section>

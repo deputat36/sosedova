@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Ипотека в декрете | Татьяна Стерликова"
+title: "Ипотека в декрете | __BROKER_NAME__"
 description: "Можно ли оформить ипотеку в декрете или отпуске по уходу за ребенком: как банк смотрит доход, созаемщика, маткапитал, кредитную нагрузку и объект."
 permalink: "/polezno/ipoteka-v-dekrete/"
 breadcrumb: "Ипотека в декрете"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека в декрете","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/ipoteka-v-dekrete/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека в декрете","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/ipoteka-v-dekrete/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <p class="lead">Оформить ипотеку во время декрета или отпуска по уходу за ребенком иногда возможно, но банк будет смотреть доход семьи, кредитную нагрузку, созаемщика, первоначальный взнос и выбранный объект.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/uslugi/semeynaya-ipoteka/' | relative_url }}">Проверить семейную ипотеку</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -62,7 +62,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <aside class="sidebar">
     <div class="seo-panel">
       <h3>Семейная ипотека</h3>
-      <p>Татьяна поможет сверить семью, объект, доход, взнос и кредитную нагрузку с возможным ипотечным маршрутом. Финальное решение принимает банк.</p>
+      <p>{{ site.data.broker.first_name }} поможет сверить семью, объект, доход, взнос и кредитную нагрузку с возможным ипотечным маршрутом. Финальное решение принимает банк.</p>
       <a class="btn btn-primary" href="{{ '/uslugi/semeynaya-ipoteka/' | relative_url }}">Услуга и консультация</a>
     </div>
     <div class="seo-panel">
@@ -115,11 +115,11 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <div>
     <p class="eyebrow">Ипотека во время декрета</p>
     <h2>Сначала проверьте доход, созаемщика и платеж</h2>
-    <p>Позвоните или напишите Татьяне: состав семьи, доход, взнос, маткапитал, кредиты и какой объект хотите купить.</p>
+    <p>Позвоните или напишите {{ site.data.broker.dative }}: состав семьи, доход, взнос, маткапитал, кредиты и какой объект хотите купить.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

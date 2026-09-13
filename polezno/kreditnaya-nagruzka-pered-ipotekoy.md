@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Кредитная нагрузка перед ипотекой: что проверить заранее | Татьяна Стерликова"
+title: "Кредитная нагрузка перед ипотекой: что проверить заранее | __BROKER_NAME__"
 description: "Что такое кредитная нагрузка перед ипотекой и как ее проверить: действующие кредиты, кредитные карты, рассрочки, алименты, комфортный платеж и подготовка заявки."
 permalink: "/polezno/kreditnaya-nagruzka-pered-ipotekoy/"
 breadcrumb: "Кредитная нагрузка перед ипотекой"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Кредитная нагрузка перед ипотекой: что проверить заранее","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Organization","name":"Ипотечный брокер Татьяна Стерликова"}}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Кредитная нагрузка перед ипотекой: что проверить заранее","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Organization","name":"Ипотечный брокер __BROKER_NAME__"}}'
 ---
 
 <section class="page-hero section">
@@ -13,7 +13,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Кред
   <h1>Кредитная нагрузка перед ипотекой: что проверить заранее</h1>
   <p class="lead">Перед ипотекой важно понять не только доход, но и все действующие обязательства: кредиты, рассрочки, кредитные карты, лимиты, алименты и будущий ипотечный платеж.</p>
   <div class="hero-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/konsultaciya/' | relative_url }}">Разобрать нагрузку</a>
   </div>
 </section>
@@ -94,11 +94,11 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Кред
   <div>
     <p class="eyebrow">Есть кредиты, карты, алименты или рассрочки?</p>
     <h2>Проверьте нагрузку до заявки</h2>
-    <p>Позвоните или напишите: доход, платежи, лимиты, алименты, взнос, объект и были ли заявки в банки. Татьяна поможет понять, с чего начать.</p>
+    <p>Позвоните или напишите: доход, платежи, лимиты, алименты, взнос, объект и были ли заявки в банки. {{ site.data.broker.first_name }} поможет понять, с чего начать.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

@@ -1,0 +1,8 @@
+{%- assign resolved = include.value | replace: '__SITE_URL__', site.url -%}
+{%- for field in site.data.broker -%}
+  {%- assign token = field[0] | upcase | prepend: '__BROKER_' | append: '__' -%}
+  {%- assign value = field[1] -%}
+  {%- if include.json -%}{%- assign value = value | jsonify | remove_first: '"' -%}{%- assign size = value.size | minus: 1 -%}{%- assign value = value | slice: 0, size -%}{%- endif -%}
+  {%- assign resolved = resolved | replace: token, value -%}
+{%- endfor -%}
+{{- resolved | replace: '__BROKER_PHONE__', site.data.contacts.phone_e164 -}}

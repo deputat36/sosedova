@@ -5,7 +5,7 @@ description: "Что проверить перед покупкой новост
 permalink: "/polezno/chto-proverit-pered-pokupkoy-novostroyki-v-ipoteku/"
 breadcrumb: "Покупка новостройки в ипотеку"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что проверить перед покупкой новостройки в ипотеку","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/chto-proverit-pered-pokupkoy-novostroyki-v-ipoteku/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что проверить перед покупкой новостройки в ипотеку","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/chto-proverit-pered-pokupkoy-novostroyki-v-ipoteku/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что �
   <p class="lead">Перед выбором квартиры в новостройке важно проверить не только платеж. Нужно понять программу, первоначальный взнос, требования банка к объекту, застройщику, документам и срокам сделки.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/konsultaciya/' | relative_url }}">Разобрать новостройку</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -101,11 +101,11 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что �
   <div>
     <p class="eyebrow">До брони квартиры</p>
     <h2>Проверьте ипотечный маршрут</h2>
-    <p>Позвоните или напишите Татьяне: город, объект, цена, взнос, доход, семейное положение и были ли уже заявки.</p>
+    <p>Позвоните или напишите {{ site.data.broker.dative }}: город, объект, цена, взнос, доход, семейное положение и были ли уже заявки.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

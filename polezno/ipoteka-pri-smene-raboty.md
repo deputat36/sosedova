@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Ипотека при смене работы: когда подавать заявку | Татьяна Стерликова"
+title: "Ипотека при смене работы: когда подавать заявку | __BROKER_NAME__"
 description: "Что проверить перед ипотекой после смены работы: новый стаж, испытательный срок, подтверждение дохода, кредиты, взнос и когда лучше подавать заявку."
 permalink: "/polezno/ipoteka-pri-smene-raboty/"
 breadcrumb: "Ипотека при смене работы"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека при смене работы: когда подавать заявку","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/ipoteka-pri-smene-raboty/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипотека при смене работы: когда подавать заявку","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/ipoteka-pri-smene-raboty/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <p class="lead">Недавняя смена работы не означает автоматический отказ, но старый расчёт ипотеки после перехода может уже не подходить. Нужно заново оценить стаж, способ подтверждения дохода, испытательный срок, кредитную нагрузку и размер будущего платежа.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=job_change_hero">Разобрать ситуацию онлайн</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/konsultaciya/' | relative_url }}">Как проходит консультация</a>
   </div>
 </section>
@@ -113,12 +113,12 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Ипот
   <div>
     <p class="eyebrow">Недавно сменили работу?</p>
     <h2>Определите готовность заявки до обращения в банк</h2>
-    <p>Передайте дату перехода, формат занятости, доход, испытательный срок, кредиты, взнос и объект. Татьяна поможет структурировать ситуацию и определить следующий шаг без обещаний решения банка.</p>
+    <p>Передайте дату перехода, формат занятости, доход, испытательный срок, кредиты, взнос и объект. {{ site.data.broker.first_name }} поможет структурировать ситуацию и определить следующий шаг без обещаний решения банка.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=job_change_footer">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

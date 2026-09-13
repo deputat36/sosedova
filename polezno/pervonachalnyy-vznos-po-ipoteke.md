@@ -4,11 +4,11 @@ title: "Первоначальный взнос по ипотеке | Как п�
 description: "Как подготовить первоначальный взнос по ипотеке: собственные средства, маткапитал, продажа имущества, финансовый резерв, оценка объекта и расходы на сделку."
 permalink: "/polezno/pervonachalnyy-vznos-po-ipoteke/"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Первоначальный взнос по ипотеке: что важно знать","author":{"@type":"Person","name":"Татьяна Стерликова"},"about":"Первоначальный взнос по ипотеке"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Первоначальный взнос по ипотеке: что важно знать","author":{"@type":"Person","name":"__BROKER_NAME__"},"about":"Первоначальный взнос по ипотеке"}'
 ---
 
 <section class="page-hero section">
-  <div class="breadcrumbs"><a href="{{ '/' | relative_url }}">Главная</a> / <a href="{{ '/polezno/' | relative_url }}">Полезно</a> / Первоначальный взнос</div>
+  
   <p class="eyebrow">Подготовка к покупке</p>
   <h1>Первоначальный взнос по ипотеке: что важно знать</h1>
   <p class="lead">Первоначальный взнос влияет на сумму кредита и будущий платеж, но подготовка не сводится к одной цифре. Важно заранее разделить деньги на взнос, расходы по сделке и резерв, понять источник средств и учесть риск, что оценка объекта окажется ниже цены продавца.</p>
@@ -96,11 +96,11 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Перв
   <div>
     <p class="eyebrow">До выбора объекта</p>
     <h2>Сравните взнос, резерв и будущий платеж</h2>
-    <p>Первичная консультация бесплатная. Для начала достаточно примерной цены объекта, накоплений, формата дохода и текущих кредитов.</p>
+    <p>Состав и стоимость работы согласуем до её начала. Для начала достаточно примерной цены объекта, накоплений, формата дохода и текущих кредитов.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=down_payment_footer">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
   </div>
 </section>

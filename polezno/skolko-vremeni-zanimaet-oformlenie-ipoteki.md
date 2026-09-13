@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Сколько времени занимает оформление ипотеки | Татьяна Стерликова"
+title: "Сколько времени занимает оформление ипотеки | __BROKER_NAME__"
 description: "От чего зависят сроки оформления ипотеки: подготовка документов, решение банка, проверка объекта, оценка, страхование и выход на сделку без обещаний фиксированного срока."
 permalink: "/polezno/skolko-vremeni-zanimaet-oformlenie-ipoteki/"
 breadcrumb: "Сроки оформления ипотеки"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Сколько времени занимает оформление ипотеки","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/skolko-vremeni-zanimaet-oformlenie-ipoteki/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Сколько времени занимает оформление ипотеки","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/skolko-vremeni-zanimaet-oformlenie-ipoteki/"}'
 ---
 
 <section class="page-hero section">
@@ -91,7 +91,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Скол
   </div>
 </section>
 
-<section class="section compact-section"><div class="notice"><div><p class="eyebrow">Клиентам «ЭТАЖИ»</p><h2>Условия подтверждаются до начала работы</h2><p>Если покупка проводится через компанию «ЭТАЖИ», состав ипотечного сопровождения и порядок оплаты зависят от действующих условий компании и параметров конкретной сделки. До начала работы уточните, какие действия входят в услугу и предусмотрена ли отдельная оплата.</p></div><a class="btn btn-dark" href="{{ '/etagi/' | relative_url }}">Уточнить условия</a></div></section>
+
 
 <section class="section cta-section">
   <div>
@@ -101,7 +101,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Скол
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=timeline_final">Разобрать маршрут</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить</a>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>
+    {% include social-links.html %}
   </div>
 </section>

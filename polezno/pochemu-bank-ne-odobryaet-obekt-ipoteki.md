@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Почему банк не одобряет объект по ипотеке: что делать | Татьяна Стерликова"
+title: "Почему банк не одобряет объект по ипотеке: что делать | __BROKER_NAME__"
 description: "Почему банк может не принять квартиру, дом, участок или новостройку по ипотеке и что проверить до аванса: документы, состояние, оценка, обременения и требования программы."
 permalink: "/polezno/pochemu-bank-ne-odobryaet-obekt-ipoteki/"
 breadcrumb: "Банк не одобряет объект"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Почему банк не одобряет объект по ипотеке: что делать","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/pochemu-bank-ne-odobryaet-obekt-ipoteki/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Почему банк не одобряет объект по ипотеке: что делать","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/pochemu-bank-ne-odobryaet-obekt-ipoteki/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Поче
   <p class="lead">Предварительное решение по заемщику ещё не означает, что банк примет конкретную квартиру, дом или участок. Перед авансом полезно отдельно проверить объект, документы, сроки и требования выбранного ипотечного маршрута.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Другая ситуация' | url_encode }}&amp;placement=object_check_hero">Разобрать объект онлайн</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/polezno/avans-zadatok-i-ipoteka/' | relative_url }}">Что проверить до аванса</a>
   </div>
 </section>
@@ -116,12 +116,12 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Поче
   <div>
     <p class="eyebrow">Нашли объект или получили замечание банка?</p>
     <h2>Разберите причину до следующего действия</h2>
-    <p>Передайте тип объекта, цену, документы, выбранный банк, условия аванса и что именно уже сообщил банк. Татьяна поможет структурировать ипотечную часть и определить следующий шаг без обещаний заранее согласовать объект.</p>
+    <p>Передайте тип объекта, цену, документы, выбранный банк, условия аванса и что именно уже сообщил банк. {{ site.data.broker.first_name }} поможет структурировать ипотечную часть и определить следующий шаг без обещаний заранее согласовать объект.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Другая ситуация' | url_encode }}&amp;placement=object_check_footer">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

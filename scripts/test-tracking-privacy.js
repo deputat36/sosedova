@@ -6,7 +6,7 @@ const path = require('node:path');
 
 const scriptPath = path.resolve(process.argv[2] || 'assets/js/main.js');
 const source = fs.readFileSync(scriptPath, 'utf8');
-const STORAGE_KEY = 'sterlikovaMortgageTracking';
+const STORAGE_KEY = 'brokerMortgageTracking';
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 function assert(condition, message) {

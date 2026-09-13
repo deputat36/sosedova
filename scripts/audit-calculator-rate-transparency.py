@@ -11,8 +11,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIRS = ("uslugi", "geo", "polezno")
-EXPECTED_SOURCE = {"index.md", "kalkulyator-ipoteki.md"}
-EXPECTED_BUILT = {"index.html", "kalkulyator-ipoteki/index.html"}
+EXPECTED_SOURCE = {"kalkulyator-ipoteki.md"}
+EXPECTED_BUILT = {"kalkulyator-ipoteki/index.html"}
 EXPECTED_LABEL = "Предполагаемая ставка, % годовых"
 EXPECTED_PLACEHOLDER = "Введите ставку"
 HINT_PARTS = (

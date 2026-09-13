@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Как проходит работа с ипотечным брокером | Татьяна Стерликова"
-description: "Понятный порядок работы с ипотечным брокером Татьяной Стерликовой: консультация, анализ ситуации, расчет, выбор маршрута, подготовка заявки, сопровождение до решения банка и согласование дальнейших шагов."
+title: "Как проходит работа с ипотечным брокером | __BROKER_NAME__"
+description: "Понятный порядок работы с ипотечным брокером __BROKER_INSTRUMENTAL__: консультация, анализ ситуации, расчет, выбор маршрута, подготовка заявки, сопровождение до решения банка и согласование дальнейших шагов."
 permalink: "/kak-prohodit-rabota/"
 breadcrumb: "Как проходит работа"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"WebPage","name":"Как проходит работа с ипотечным брокером","description":"Порядок работы с ипотечным брокером Татьяной Стерликовой: консультация, анализ ситуации, расчет, выбор ипотечного маршрута, подготовка заявки, сопровождение до решения банка и согласование дальнейших шагов.","url":"https://sterlikova-ipoteka.ru/kak-prohodit-rabota/"}'
+schema: '{"@context":"https://schema.org","@type":"WebPage","name":"Как проходит работа с ипотечным брокером","description":"Порядок работы с ипотечным брокером __BROKER_INSTRUMENTAL__: консультация, анализ ситуации, расчет, выбор ипотечного маршрута, подготовка заявки, сопровождение до решения банка и согласование дальнейших шагов.","url":"__SITE_URL__/kak-prohodit-rabota/"}'
 ---
 
 <section class="page-hero section">
@@ -14,17 +14,17 @@ schema: '{"@context":"https://schema.org","@type":"WebPage","name":"Как пр�
   <p class="lead">Главная задача консультации — не отправить заявку в первый попавшийся банк, а спокойно разобрать ситуацию, понять ограничения, выбрать маршрут и снизить риск ошибок перед покупкой жилья.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}">Заполнить онлайн-заявку</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-light" href="{{ '/konsultaciya/' | relative_url }}">Как проходит консультация</a>
-    <button class="btn btn-light" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-light" href="https://vk.com/tatyanasterlikova" rel="noopener">ВКонтакте</a>
+    
+    {% include social-links.html %}
   </div>
 </section>
 
 <section class="section content-layout">
   <article class="content-main">
     <h2>1. Первичный разговор</h2>
-    <p>На первом этапе Татьяна уточняет цель покупки, город или район, примерную стоимость жилья, размер первоначального взноса, доход, действующие кредиты, семейную ситуацию и наличие созаемщиков.</p>
+    <p>На первом этапе {{ site.data.broker.first_name }} уточняет цель покупки, город или район, примерную стоимость жилья, размер первоначального взноса, доход, действующие кредиты, семейную ситуацию и наличие созаемщиков.</p>
     <p>Этот разговор помогает понять, с какой задачей вы пришли: покупка квартиры, дома, новостройки, вторичного жилья, использование материнского капитала, рефинансирование или повторная попытка после отказа банка.</p>
 
     <h2>2. Разбор ипотечной ситуации</h2>
@@ -43,11 +43,11 @@ schema: '{"@context":"https://schema.org","@type":"WebPage","name":"Как пр�
     <p>Если покупка связана с конкретным объектом, отдельно разбираются требования банка к квартире, дому, участку или новостройке.</p>
 
     <h2>6. Сопровождение до решения банка</h2>
-    <p>После подачи заявки Татьяна помогает ориентироваться в статусах, запросах банка и дальнейших действиях. Если банк просит дополнительные документы или условия меняются, важно быстро понять, что делать дальше.</p>
+    <p>После подачи заявки {{ site.data.broker.first_name }} помогает ориентироваться в статусах, запросах банка и дальнейших действиях. Если банк просит дополнительные документы или условия меняются, важно быстро понять, что делать дальше.</p>
 
     <h2>7. Разбор дальнейших шагов после решения банка</h2>
     <p>Решение по заемщику еще не завершает покупку. Дальше могут потребоваться проверка условий, объекта, оценки, страхования, документов продавца и сроков выхода на сделку.</p>
-    <p>Конкретный объем помощи после решения банка зависит от выбранного формата работы и согласуется заранее. Для сделки через компанию «ЭТАЖИ» состав сопровождения и порядок оплаты подтверждаются по действующим условиям компании и параметрам конкретной сделки.</p>
+    <p>Конкретный объем помощи после решения банка зависит от выбранного формата работы и согласуется заранее. Состав сопровождения и порядок оплаты согласуем до начала работы.</p>
     <p>Если продавец или застройщик просит быстро определиться, полезно заранее понимать <a class="text-link" href="{{ '/polezno/skolko-vremeni-zanimaet-oformlenie-ipoteki/' | relative_url }}">сколько времени занимает оформление ипотеки</a> и какие этапы могут повлиять на срок сделки.</p>
   </article>
 
@@ -68,7 +68,7 @@ schema: '{"@context":"https://schema.org","@type":"WebPage","name":"Как пр�
         <li><a href="{{ '/konsultaciya/' | relative_url }}">Консультация</a></li>
         <li><a href="{{ '/uslugi/' | relative_url }}">Все услуги</a></li>
         <li><a href="{{ '/stoimost/' | relative_url }}">Стоимость частного сопровождения</a></li>
-        <li><a href="{{ '/etagi/' | relative_url }}">Маршрут для клиентов «ЭТАЖИ»</a></li>
+        
         <li><a href="{{ '/kalkulyator-ipoteki/' | relative_url }}">Калькулятор ипотеки</a></li>
         <li><a href="{{ '/polezno/dokumenty-dlya-ipoteki/' | relative_url }}">Документы для ипотеки</a></li>
       </ul>
@@ -88,19 +88,7 @@ schema: '{"@context":"https://schema.org","@type":"WebPage","name":"Как пр�
   </div>
 </section>
 
-<section class="section compact-section">
-  <div class="notice">
-    <div>
-      <p class="eyebrow">Два формата работы</p>
-      <h2>Частное сопровождение и сделки через «ЭТАЖИ»</h2>
-      <p>При частном обращении объем и стоимость работы согласуются до начала платного сопровождения. Для клиента компании «ЭТАЖИ» до начала работы отдельно подтверждаются состав сопровождения, действующий порядок оплаты и возможная дополнительная стоимость.</p>
-    </div>
-    <div class="hero-actions">
-      <a class="btn btn-dark" href="{{ '/stoimost/' | relative_url }}">Стоимость частной работы</a>
-      <a class="btn btn-dark" href="{{ '/etagi/' | relative_url }}">Условия для клиентов «ЭТАЖИ»</a>
-    </div>
-  </div>
-</section>
+
 
 <section class="section related-section">
   <div class="section-head">
@@ -118,14 +106,14 @@ schema: '{"@context":"https://schema.org","@type":"WebPage","name":"Как пр�
 <section class="section cta-section">
   <div>
     <p class="eyebrow">Начать проще с разговора</p>
-    <h2>Расскажите Татьяне вашу ситуацию</h2>
+    <h2>Расскажите {{ site.data.broker.dative }} вашу ситуацию</h2>
     <p>Заполните короткую анкету или свяжитесь напрямую: что хотите купить, где, какой взнос, доход, есть ли кредиты и были ли заявки в банки.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
     <a class="btn btn-secondary" href="{{ '/konsultaciya/' | relative_url }}">Консультация</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВКонтакте</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

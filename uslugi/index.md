@@ -1,20 +1,8 @@
 ---
-layout: default
-title: "Услуги ипотечного брокера Людмилы Соседовой"
-description: "Подбор ипотеки, семейная ипотека, строительство дома и помощь в сложных случаях."
-permalink: /uslugi/
+layout: "redirect"
+title: "Услуги"
+permalink: "/uslugi/index-legacy.html"
+redirect_to: "/uslugi/"
+sitemap: false
+robots: "noindex, follow"
 ---
-
-# Услуги ипотечного брокера
-
-Помогаю подобрать подходящую ипотечную программу, подготовить документы и пройти путь от первого вопроса до решения банка.
-
-{% for service in site.data.services %}
-
-## {{ service.title }}
-
-{{ service.description }}
-
-{% endfor %}
-
-Получить консультацию можно по телефону {{ site.data.contacts.phone }}.

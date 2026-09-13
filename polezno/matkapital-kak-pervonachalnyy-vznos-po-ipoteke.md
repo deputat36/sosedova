@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Маткапитал как первоначальный взнос по ипотеке: что проверить | Татьяна Стерликова"
+title: "Маткапитал как первоначальный взнос по ипотеке: что проверить | __BROKER_NAME__"
 description: "Как подготовить материнский капитал к первоначальному взносу по ипотеке: банк, объект, собственные средства, документы, сроки, семейная ипотека и запас на расходы."
 permalink: "/polezno/matkapital-kak-pervonachalnyy-vznos-po-ipoteke/"
 breadcrumb: "Маткапитал как взнос"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Материнский капитал как первоначальный взнос по ипотеке: что проверить","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/matkapital-kak-pervonachalnyy-vznos-po-ipoteke/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Материнский капитал как первоначальный взнос по ипотеке: что проверить","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/matkapital-kak-pervonachalnyy-vznos-po-ipoteke/"}'
 ---
 
 <section class="page-hero section">
@@ -14,7 +14,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Мате
   <p class="lead">Материнский капитал может быть частью первоначального взноса, но сам сертификат не заменяет проверку банка, программы, объекта, собственных средств и документов семьи. Сначала нужно понять весь финансовый маршрут сделки.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Материнский капитал' | url_encode }}&amp;placement=matcapital_down_hero">Проверить сценарий онлайн</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/uslugi/materinskiy-kapital/' | relative_url }}">Ипотека с маткапиталом</a>
   </div>
 </section>
@@ -111,12 +111,12 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Мате
   <div>
     <p class="eyebrow">Планируете использовать маткапитал?</p>
     <h2>Соберите схему покупки до подачи заявки</h2>
-    <p>Передайте стоимость объекта, сумму маткапитала, собственные средства, доход, кредиты и программу. Татьяна поможет структурировать ипотечную часть и определить следующий шаг без обещаний решения банка.</p>
+    <p>Передайте стоимость объекта, сумму маткапитала, собственные средства, доход, кредиты и программу. {{ site.data.broker.first_name }} поможет структурировать ипотечную часть и определить следующий шаг без обещаний решения банка.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Материнский капитал' | url_encode }}&amp;placement=matcapital_down_footer">Онлайн-заявка</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

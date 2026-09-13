@@ -134,23 +134,14 @@ jobs:
             fi
           }
 
-          run_audit "Required post-build checks" bash scripts/post-build-check.sh ./_site
-          run_audit "Built HTML, links and structured data" python3 scripts/audit-built-site.py ./_site
-          run_audit "District materials cluster" python3 scripts/audit-district-materials.py ./_site
-          run_audit "Conversion pages and CTA" python3 scripts/audit-conversion-pages.py ./_site
-          run_audit "Unconfirmed ETAGI terms" python3 scripts/audit-etagi-terms.py ./_site
-          run_audit "ETAGI terms in useful materials" python3 scripts/audit-etagi-content-pages.py ./_site
-          run_audit "SEO of service pages" python3 scripts/audit-service-seo.py ./_site
-          run_audit "Regional landing pages" python3 scripts/audit-regional-pages.py ./_site
-          run_audit "Regional content uniqueness" python3 scripts/audit-regional-uniqueness.py ./_site
-          run_audit "Distinct regional content intents" python3 scripts/audit-regional-intents.py ./_site
-          run_audit "Regional reading paths" python3 scripts/audit-regional-link-paths.py ./_site
-          run_audit "Complex application routes" python3 scripts/audit-complex-application-routes.py ./_site
-          run_audit "Complex application preparation context" python3 scripts/audit-application-preparation-context.py ./_site
-          run_audit "Online application and remote service route" python3 scripts/audit-online-application.py ./_site
-          run_audit "Thank-you privacy" python3 scripts/audit-thankyou-privacy.py ./_site
-          run_audit "Progressive mobile application UX" python3 scripts/audit-application-ux.py ./_site
-          run_audit "Live-domain contract against Pages artifact" python3 scripts/smoke-live-domain.py --site-dir ./_site
+          run_audit "National broker acceptance" python3 scripts/audit-broker-launch.py ./_site
+          run_audit "Calculator behaviour" node scripts/test-mortgage-calculator-application-action.js ./_site/assets/js/mortgage-calculator.js
+          run_audit "Calculator form handoff" node scripts/test-calculator-application-prefill.js ./_site/assets/js/calculator-application-prefill-runtime.js
+          run_audit "Consent validation" node scripts/test-application-consent-validation.js ./_site/online-zayavka/index.html
+          run_audit "Tracking privacy" node scripts/test-tracking-privacy.js ./_site/assets/js/main.js
+          run_audit "Time-sensitive content" python3 scripts/audit-time-sensitive-content.py ./_site
+          run_audit "Calculator rate transparency" python3 scripts/audit-calculator-rate-transparency.py ./_site
+          run_audit "Calculator cost disclosure" python3 scripts/audit-calculator-cost-disclosure.py ./_site
 
           echo "Post-build audit failures: ${failures}" | tee -a post-build-audits.log
           test "$failures" -eq 0
@@ -204,7 +195,7 @@ jobs:
       - name: Verify published custom domain
         run: |
           set -o pipefail
-          python3 scripts/smoke-live-domain.py --attempts 12 --delay 15 --timeout 20 2>&1 | tee production-smoke.log
+          python3 scripts/smoke-broker-domain.py 2>&1 | tee production-smoke.log
       - name: Upload production smoke diagnostics
         if: failure()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1

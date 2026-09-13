@@ -1,20 +1,20 @@
 ---
 layout: "default"
-title: "Как подготовиться к ипотеке перед заявкой | Борисоглебск"
+title: "Как подготовиться к ипотеке перед заявкой | Ипотека по России"
 description: "Пошаговая подготовка к ипотеке: доход, кредитная нагрузка, история, первоначальный взнос, документы, объект, расчет платежа и порядок действий до банка."
 permalink: "/polezno/kak-podgotovitsya-k-ipoteke/"
 og_type: "article"
 ---
 
 <section class="page-hero section">
-  <div class="breadcrumbs"><a href="{{ '/' | relative_url }}">Главная</a> / <a href="{{ '/polezno/' | relative_url }}">Полезно</a> / Подготовка</div>
+  
   <p class="eyebrow">Перед заявкой</p>
   <h1>Как подготовиться к ипотеке и не испортить заявку</h1>
   <p class="lead">Хорошая подготовка начинается не с отправки анкеты в банк, а с проверки бюджета, кредитной нагрузки, истории, первоначального взноса и объекта. Такой порядок помогает заранее увидеть слабые места и выбрать следующий шаг без хаотичных заявок.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=article_hero">Заполнить онлайн-заявку</a>
     <a class="btn btn-secondary" href="{{ '/kalkulyator-ipoteki/' | relative_url }}">Рассчитать платеж</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -92,11 +92,11 @@ og_type: "article"
   <div>
     <p class="eyebrow">Перед заявкой в банк</p>
     <h2>Соберите вводные и выберите порядок действий</h2>
-    <p>Первичная консультация бесплатная. Окончательное решение по кредиту, сумме и условиям принимает банк.</p>
+    <p>Состав и стоимость работы согласуем до её начала. Окончательное решение по кредиту, сумме и условиям принимает банк.</p>
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=article_footer">Заполнить заявку</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
   </div>
 </section>

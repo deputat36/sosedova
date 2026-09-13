@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Что влияет на одобрение ипотеки | Татьяна Стерликова"
+title: "Что влияет на одобрение ипотеки | __BROKER_NAME__"
 description: "Что банк учитывает при рассмотрении ипотечной заявки: доход, кредитная нагрузка, кредитная история, первоначальный взнос, объект, документы, созаемщик, ошибки подготовки и частые заявки."
 permalink: "/polezno/chto-vliyaet-na-odobrenie-ipoteki/"
 breadcrumb: "Что влияет на одобрение"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что влияет на одобрение ипотеки","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/chto-vliyaet-na-odobrenie-ipoteki/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что влияет на одобрение ипотеки","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/chto-vliyaet-na-odobrenie-ipoteki/"}'
 ---
 
 <section class="page-hero section">
@@ -15,7 +15,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что �
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=approval_factors_hero">Разобрать вводные онлайн</a>
     <a class="btn btn-secondary" href="{{ '/konsultaciya/' | relative_url }}">Консультация</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
   </div>
 </section>
 
@@ -105,8 +105,8 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Что �
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=approval_factors_footer">Проверить вводные</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

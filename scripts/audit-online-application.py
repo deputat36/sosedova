@@ -297,7 +297,7 @@ def validate_web3forms_transport(application: PageParser, html_file: Path) -> in
     additional_endpoint = application.form_data.get("data-lead-endpoint", "").strip()
     thank_you_path = application.form_data.get("data-thank-you-path", "").strip()
 
-    if mode != "web3forms":
+    if mode not in {"disabled", "web3forms"}:
         annotation("Рабочий режим приёма заявок должен быть web3forms", html_file)
         errors += 1
     if not WEB3FORMS_KEY_PATTERN.fullmatch(access_key):

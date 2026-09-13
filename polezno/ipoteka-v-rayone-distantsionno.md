@@ -1,20 +1,20 @@
 ---
 layout: "default"
-title: "Как начать ипотеку дистанционно из района | Татьяна Стерликова"
-description: "Как жителю Грибановского района, Поворино, Поворинского района или Борисоглебского городского округа начать ипотечную консультацию дистанционно: что написать брокеру, какие данные подготовить, как не отправлять лишние документы и когда ехать в офис или банк."
+title: "Как начать ипотеку дистанционно из района | __BROKER_NAME__"
+description: "Как покупателю из другого города начать ипотечную консультацию дистанционно: что написать брокеру, какие данные подготовить, как не отправлять лишние документы и когда ехать в офис или банк."
 permalink: "/polezno/ipoteka-v-rayone-distantsionno/"
 breadcrumb: "Ипотека дистанционно"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как начать ипотеку дистанционно из района","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/ipoteka-v-rayone-distantsionno/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как начать ипотеку дистанционно из района","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/ipoteka-v-rayone-distantsionno/"}'
 ---
 
 <section class="page-hero section">
   <p class="eyebrow">Для жителей районов</p>
   <h1>Как начать ипотеку дистанционно из района</h1>
-  <p class="lead">Первичный разбор ипотечной ситуации можно начать онлайн или по телефону. Это удобно, если вы живете в Грибановском районе, Поворино, Поворинском районе, Борисоглебском городском округе или временно находитесь в другом городе.</p>
+  <p class="lead">Первичный разбор ипотечной ситуации можно начать онлайн или по телефону. Это удобно, если вы живёте далеко от объекта покупки или временно находитесь в другом городе.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=district_remote_hero">Начать онлайн</a>
-    <a class="btn btn-light" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-light" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/konsultaciya/' | relative_url }}">Как проходит консультация</a>
   </div>
 </section>
@@ -27,7 +27,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
   </div>
   <div class="grid cards-4">
     <article class="card"><h3>Цель покупки</h3><p>Квартира, дом, участок со строительством, новостройка или вторичное жилье.</p></article>
-    <article class="card"><h3>Город и объект</h3><p>Где находится объект: Борисоглебск, район, соседний город или другой регион.</p></article>
+    <article class="card"><h3>Город и объект</h3><p>Где находится объект: ваш город или другой регион.</p></article>
     <article class="card"><h3>Доход и занятость</h3><p>Официальная работа, ИП, самозанятость, смешанный доход или смена работы.</p></article>
     <article class="card"><h3>Первоначальный взнос</h3><p>Собственные средства, материнский капитал, продажа старого жилья или накопления.</p></article>
     <article class="card"><h3>Кредиты и карты</h3><p>Действующие кредиты, рассрочки, кредитные карты, лимиты и просрочки.</p></article>
@@ -59,7 +59,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
     <p>Удаленно можно понять примерный порядок действий, какие данные уточнить, какие риски есть по доходу, нагрузке, взносу, объекту и предыдущим заявкам. Также можно подготовиться к общению с банком или к выбору объекта. Этапы работы описаны на странице <a class="text-link" href="{{ '/kak-prohodit-rabota/' | relative_url }}">«Как проходит работа»</a>.</p>
 
     <h2>Когда может понадобиться личная встреча</h2>
-    <p>Личная встреча или визит в офис может понадобиться, когда нужно подробно разобрать документы, согласовать сопровождение, связать ипотеку с покупкой конкретного объекта или обсудить сделку через компанию «ЭТАЖИ». Часть этапов все равно зависит от банка, объекта, продавца и формата сделки.</p>
+    <p>Личная встреча или визит в офис может понадобиться, когда нужно подробно разобрать документы, согласовать сопровождение, связать ипотеку с покупкой конкретного объекта. Часть этапов все равно зависит от банка, объекта, продавца и формата сделки.</p>
   </article>
 
   <aside class="sidebar">
@@ -72,9 +72,9 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
       <h3>Локальные страницы</h3>
       <ul>
         <li><a href="{{ '/polezno/materialy-dlya-zhiteley-rayonov/' | relative_url }}">Все материалы для жителей районов</a></li>
-        <li><a href="{{ '/geo/borisoglebsk/' | relative_url }}">Ипотека в Борисоглебске</a></li>
-        <li><a href="{{ '/geo/gribanovskiy/' | relative_url }}">Ипотека в Грибановском районе</a></li>
-        <li><a href="{{ '/geo/povorino/' | relative_url }}">Ипотека в Поворино</a></li>
+        
+        
+        
         <li><a href="{{ '/geo/' | relative_url }}">Вся география</a></li>
       </ul>
     </div>
@@ -102,8 +102,8 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=district_remote_footer">Начать онлайн</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

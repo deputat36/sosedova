@@ -1,0 +1,1 @@
+{% for channel in site.data.social %}{% if channel[1] != '' %}<a class="btn btn-light social-link" href="{{ channel[1] | escape }}" rel="noopener" data-social="{{ channel[0] }}">{% case channel[0] %}{% when 'vk' %}VK{% when 'max' %}MAX{% when 'telegram' %}Telegram{% endcase %}</a>{% endif %}{% endfor %}

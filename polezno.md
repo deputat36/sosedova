@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Полезные материалы по ипотеке | Татьяна Стерликова"
+title: "Полезные материалы по ипотеке | __BROKER_NAME__"
 description: "Полезные статьи по ипотеке: доход, платеж, первоначальный взнос, кредитная история, документы, оценка недвижимости, страхование, новостройка, вторичка, дом, маткапитал, семейная ипотека, покупка из района и сложные ситуации."
 permalink: "/polezno/"
 og_type: "article"
@@ -106,13 +106,13 @@ og_type: "article"
 <section class="section muted">
   <div class="section-head">
     <p class="eyebrow">Жителям районов</p>
-    <h2>Если вы покупаете жилье в Борисоглебске из района</h2>
-    <p>Отдельный блок для жителей Грибановского, Поворино, Борисоглебского округа и соседних населенных пунктов: как начать дистанционно, подготовиться к просмотру и не тратить поездку впустую.</p>
+    <h2>Если вы покупаете жилье по России из района</h2>
+    <p>Материалы для покупателей из другого города: как начать дистанционно, подготовиться к просмотру и не тратить поездку впустую.</p>
   </div>
   <div class="grid cards-4">
     <article class="card"><h3><a href="{{ '/polezno/materialy-dlya-zhiteley-rayonov/' | relative_url }}">Материалы для жителей районов</a></h3><p>Общий раздел со страницами для покупателей из районов и соседних населенных пунктов.</p></article>
     <article class="card"><h3><a href="{{ '/polezno/ipoteka-v-rayone-distantsionno/' | relative_url }}">Как начать ипотеку дистанционно</a></h3><p>Что написать брокеру и какие данные подготовить без личной встречи.</p></article>
-    <article class="card"><h3><a href="{{ '/polezno/kupit-zhile-v-borisoglebske-iz-rayona/' | relative_url }}">Купить жилье в Борисоглебске из района</a></h3><p>Как связать бюджет, взнос, объект, сроки и ипотечную готовность.</p></article>
+    <article class="card"><h3><a href="{{ '/polezno/kupit-zhile-v-borisoglebske-iz-rayona/' | relative_url }}">Купить жилье по России из района</a></h3><p>Как связать бюджет, взнос, объект, сроки и ипотечную готовность.</p></article>
     <article class="card"><h3><a href="{{ '/polezno/prosmotr-zhilya-v-borisoglebske-iz-rayona/' | relative_url }}">Подготовка к просмотру жилья</a></h3><p>Какие вопросы задать до поездки и что проверить на месте.</p></article>
   </div>
 </section>
@@ -154,8 +154,8 @@ og_type: "article"
     <p>Для первичного разговора достаточно описать город, объект, доход, первоначальный взнос и были ли заявки в банки.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">Позвонить</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВКонтакте</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

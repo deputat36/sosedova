@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Как понять комфортный платеж по ипотеке | Татьяна Стерликова"
+title: "Как понять комфортный платеж по ипотеке | __BROKER_NAME__"
 description: "Как заранее оценить комфортный платеж по ипотеке: доход, кредитная нагрузка, первоначальный взнос, срок кредита, запас на расходы и предварительный расчет."
 permalink: "/polezno/kak-ponyat-komfortnyy-platezh-po-ipoteke/"
 breadcrumb: "Комфортный платеж по ипотеке"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как понять комфортный платеж по ипотеке","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Organization","name":"Ипотечный брокер Татьяна Стерликова"}}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как понять комфортный платеж по ипотеке","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Organization","name":"Ипотечный брокер __BROKER_NAME__"}}'
 ---
 
 <section class="page-hero section">
@@ -81,11 +81,11 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
   <div>
     <p class="eyebrow">Нужен расчет под вашу ситуацию?</p>
     <h2>Начните с консультации</h2>
-    <p>Позвоните или напишите: доход, взнос, стоимость жилья, срок, кредиты и состав семьи. Татьяна поможет понять реалистичный ипотечный маршрут.</p>
+    <p>Позвоните или напишите: доход, взнос, стоимость жилья, срок, кредиты и состав семьи. {{ site.data.broker.first_name }} поможет понять реалистичный ипотечный маршрут.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

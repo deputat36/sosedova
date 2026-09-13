@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Как уменьшить платеж по ипотеке | Татьяна Стерликова"
+title: "Как уменьшить платеж по ипотеке | __BROKER_NAME__"
 description: "Как снизить будущий платеж по ипотеке: первоначальный взнос, срок, сумма кредита, банк, программа, кредитная нагрузка, созаемщик и подготовка заявки."
 permalink: "/polezno/kak-umenshit-platezh-po-ipoteke/"
 breadcrumb: "Как уменьшить платеж"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как уменьшить платеж по ипотеке","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Person","name":"Татьяна Стерликова"},"mainEntityOfPage":"https://sterlikova-ipoteka.ru/polezno/kak-umenshit-platezh-po-ipoteke/"}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как уменьшить платеж по ипотеке","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Person","name":"__BROKER_NAME__"},"mainEntityOfPage":"__SITE_URL__/polezno/kak-umenshit-platezh-po-ipoteke/"}'
 ---
 
 <section class="page-hero section">
@@ -103,8 +103,8 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Как �
   </div>
   <div class="cta-actions">
     <a class="btn btn-primary" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}&amp;scenario={{ 'Первичная консультация и подбор ипотеки' | url_encode }}&amp;placement=lower_payment_footer">Разобрать варианты</a>
-    <a class="btn btn-secondary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-secondary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>

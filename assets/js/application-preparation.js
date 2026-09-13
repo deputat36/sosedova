@@ -194,7 +194,7 @@
     const context = window.getApplicationPreparationText();
     if (!context || !output || !output.value) return;
     output.value = appendPreparationToApplicationText(output.value);
-    if (smsLink) smsLink.href = `sms:+79030250807?body=${encodeURIComponent(output.value)}`;
+    if (smsLink) smsLink.href = `sms:${(window.brokerConfig || {}).phone || ""}?body=${encodeURIComponent(output.value)}`;
   }
 
   form.addEventListener('submit', () => {
@@ -230,7 +230,7 @@
       if (!text) return;
       try {
         await navigator.share({ title: 'Онлайн-заявка ипотечному брокеру', text });
-        setStatus('Заявка передана в выбранное приложение.', 'success');
+        setStatus('Открыт выбранный способ отправки. Завершите отправку в приложении.', 'success');
         track('online_application_share');
       } catch (error) {
         if (error && error.name === 'AbortError') return;

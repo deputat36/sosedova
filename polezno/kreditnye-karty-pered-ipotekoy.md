@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "Кредитные карты перед ипотекой: могут ли помешать одобрению | Татьяна Стерликова"
+title: "Кредитные карты перед ипотекой: могут ли помешать одобрению | __BROKER_NAME__"
 description: "Как кредитные карты могут повлиять на ипотечную заявку: лимиты, долговая нагрузка, просрочки, закрытие карт, подготовка перед обращением в банк."
 permalink: "/polezno/kreditnye-karty-pered-ipotekoy/"
 breadcrumb: "Кредитные карты перед ипотекой"
 og_type: "article"
-schema: '{"@context":"https://schema.org","@type":"Article","headline":"Кредитные карты перед ипотекой: могут ли помешать одобрению","author":{"@type":"Person","name":"Татьяна Стерликова"},"publisher":{"@type":"Organization","name":"Ипотечный брокер Татьяна Стерликова"}}'
+schema: '{"@context":"https://schema.org","@type":"Article","headline":"Кредитные карты перед ипотекой: могут ли помешать одобрению","author":{"@type":"Person","name":"__BROKER_NAME__"},"publisher":{"@type":"Organization","name":"Ипотечный брокер __BROKER_NAME__"}}'
 ---
 
 <section class="page-hero section">
@@ -13,7 +13,7 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Кред
   <h1>Кредитные карты перед ипотекой: могут ли помешать одобрению</h1>
   <p class="lead">Даже если кредитная карта почти не используется, перед ипотекой ее лучше не игнорировать. Банк оценивает не только доход, но и действующие обязательства, лимиты, просрочки и общую долговую нагрузку.</p>
   <div class="hero-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">Позвонить Татьяне</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить {{ site.data.broker.dative }}</a>
     <a class="btn btn-secondary" href="{{ '/konsultaciya/' | relative_url }}">Разобрать нагрузку</a>
   </div>
 </section>
@@ -80,11 +80,11 @@ schema: '{"@context":"https://schema.org","@type":"Article","headline":"Кред
   <div>
     <p class="eyebrow">Есть кредитные карты?</p>
     <h2>Проверьте нагрузку до заявки в банк</h2>
-    <p>Позвоните или напишите: доход, кредиты, кредитные карты, лимиты, взнос и объект покупки. Татьяна поможет понять, с чего начать.</p>
+    <p>Позвоните или напишите: доход, кредиты, кредитные карты, лимиты, взнос и объект покупки. {{ site.data.broker.first_name }} поможет понять, с чего начать.</p>
   </div>
   <div class="cta-actions">
-    <a class="btn btn-primary" href="tel:+79030250807">8 903 025-08-07</a>
-    <button class="btn btn-secondary" type="button" data-copy-phone>MAX</button>
-    <a class="btn btn-secondary" href="https://vk.com/tatyanasterlikova" rel="noopener">ВК</a>
+    <a class="btn btn-primary" href="tel:{{ site.data.contacts.phone_e164 }}">{{ site.data.contacts.phone }}</a>
+    
+    {% include social-links.html %}
   </div>
 </section>
