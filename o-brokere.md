@@ -1,7 +1,7 @@
 ---
 layout: "default"
 title: "__BROKER_NAME__ — ипотечный брокер по России"
-description: "О работе ипотечного брокера __BROKER_GENITIVE__: консультации, подбор ипотеки, сложные заявки, частное сопровождение."
+description: "О работе ипотечного брокера __BROKER_GENITIVE__: консультации, подбор ипотеки, сложные заявки, работа с банками."
 permalink: "/o-brokere/"
 og_type: "profile"
 schema: '{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"__BROKER_NAME__","jobTitle":"Ипотечный брокер","telephone":"__BROKER_PHONE__","url":"__SITE_URL__/o-brokere/","areaServed":{"@type":"Country","name":"Россия"}}}'
@@ -19,6 +19,8 @@ schema: '{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@
   {% include portrait.html %}
   <div><p class="eyebrow">Подход к работе</p><h2>Сначала анализ ситуации, затем заявка в банк</h2><p>Ипотека зависит от совокупности факторов: дохода, кредитной нагрузки, первоначального взноса, состава семьи, выбранной программы и самого объекта недвижимости.</p><p>Задача {{ site.data.broker.genitive }} — помочь собрать эту картину, объяснить требования понятным языком и определить обоснованный порядок действий. Окончательное решение по кредиту, ставке и условиям всегда принимает банк.</p><div class="hero-actions"><a class="btn btn-primary" href="{{ '/uslugi/' | relative_url }}">Посмотреть услуги</a><a class="btn btn-light" href="{{ '/kontakty/' | relative_url }}">Все контакты</a></div></div>
 </section>
+
+<section class="section"><div class="section-head"><h2>Опыт и образование</h2><p>{{ site.data.broker.full_name }} — {{ site.data.broker.positioning | downcase }}.</p></div><div class="grid cards-3"><article class="card"><h3>{{ site.data.broker.clients_total }}</h3><p>{{ site.data.broker.professional_background }}</p></article><article class="card"><h3>Профильное образование</h3><p>{{ site.data.broker.education }}</p></article><article class="card"><h3>Опыт работы с банками</h3><p>{{ site.data.broker.banks }}.</p><p>Подбор зависит от задачи клиента и действующих требований банка.</p></article></div><p>{{ site.data.broker.insurance }}</p></section>
 
 <section class="section muted">
   <div class="section-head"><p class="eyebrow">Принципы</p><h2>Что важно в ипотечном сопровождении</h2></div>
