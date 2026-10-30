@@ -20,8 +20,8 @@ exclude:
 - source-audits.log
 - post-build-audits.log
 lead_capture:
-  mode: disabled
-  web3forms_access_key: ''
+  mode: web3forms
+  web3forms_access_key: '848efbfa-1415-4055-aa50-c0bf9583599a'
   web3forms_endpoint: https://api.web3forms.com/submit
   endpoint: ''
   thank_you_path: /spasibo/
