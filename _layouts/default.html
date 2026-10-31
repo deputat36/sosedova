@@ -168,7 +168,7 @@
     </section>
     {% endif %}
   </main>
-  <div class="sticky-contacts" aria-label="Быстрая связь с ипотечным брокером"><a class="sticky-action sticky-apply" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}">Заявка</a><a class="sticky-action sticky-call" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a>{% include social-links.html %}</div>
+  <div class="sticky-contacts{% if page.url == '/online-zayavka/' %} sticky-contacts-form{% endif %}" aria-label="Быстрая связь с ипотечным брокером"><a class="sticky-action sticky-apply" href="{{ '/online-zayavka/' | relative_url }}?source={{ page.url | url_encode }}">Заявка</a><a class="sticky-action sticky-call" href="tel:{{ site.data.contacts.phone_e164 }}">Позвонить</a><a class="sticky-action sticky-more" href="{{ '/kontakty/' | relative_url }}">Контакты</a></div>
   <footer class="site-footer{% if page.url == '/online-zayavka/' %} site-footer-compact{% endif %}">
     <div class="footer-brand">
       <a class="footer-person" href="{{ '/o-brokere/' | relative_url }}">
